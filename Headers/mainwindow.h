@@ -19,6 +19,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void on_startButton_clicked();
     void on_runButton_clicked();
 
     void onServerMessageReceived(QString message);

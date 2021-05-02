@@ -6,21 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
         ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    m_server = new TcpServer(this);
-
-    if (m_server->startListening(21579))
-        ui->StdoutList->addItem("Server started.");
-    else
-        ui->StdoutList->addItem("Server failed to start.");
-
-    m_client1 = new TcpClient(this);
-    if (m_client1->connectTo("localhost", 21579))
-        ui->StdoutList->addItem("Client connected.");
-    else
-        ui->StdoutList->addItem("Client failed to connect.");
-
-    connect(m_server,  &TcpServer::messageReceived, this, &MainWindow::onServerMessageReceived);
-//    connect(m_client1, &TcpClient::messageReceived, this, &MainWindow::onClientMessageReceived);
+    ui->runButton->setEnabled(false);
 }
 
 MainWindow::~MainWindow()
@@ -28,11 +14,36 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_startButton_clicked()
+{
+    QString port = ui->PortLine->text();
+    bool isConnected = false;
+
+    m_server = new TcpServer(this);
+    if (m_server->startListening(port.toInt()))
+        ui->ApplogList->addItem("Server started on port " + port + ".");
+    else
+        ui->ApplogList->addItem("Server failed. Please restart.");
+
+    m_client1 = new TcpClient(this);
+    if (m_client1->connectTo("localhost", port.toInt())) {
+        ui->ApplogList->addItem("Client connected on port " + port + ".");
+        isConnected = true;
+    }
+    else
+        ui->ApplogList->addItem("Client failed to connect. Please restart.");
+
+    connect(m_server,  &TcpServer::messageReceived, this, &MainWindow::onServerMessageReceived);
+
+    ui->runButton->setEnabled(isConnected);
+    ui->startButton->setEnabled(false);
+}
 
 void MainWindow::on_runButton_clicked()
 {
     m_client1->sendMessage(ui->TextEditor->toPlainText()); //enviar al servidor
     ui->RamList->addItem(ui->TextEditor->toPlainText()); // muestra lo que le envía al servidor
+
 }
 
 //void MainWindow::onClientMessageReceived(QString message)

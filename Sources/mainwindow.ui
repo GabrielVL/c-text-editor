@@ -30,9 +30,9 @@
    <widget class="QPlainTextEdit" name="TextEditor">
     <property name="geometry">
      <rect>
-      <x>3</x>
+      <x>10</x>
       <y>40</y>
-      <width>881</width>
+      <width>870</width>
       <height>460</height>
      </rect>
     </property>
@@ -43,9 +43,9 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>540</y>
-      <width>1221</width>
+      <width>1200</width>
       <height>251</height>
      </rect>
     </property>
@@ -86,9 +86,9 @@
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
+      <x>10</x>
       <y>0</y>
-      <width>681</width>
+      <width>870</width>
       <height>41</height>
      </rect>
     </property>
@@ -113,7 +113,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="PortLine"/>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
@@ -128,10 +128,10 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_2"/>
+      <widget class="QLineEdit" name="RamLine"/>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="startButton">
        <property name="text">
         <string>OK</string>
        </property>
@@ -144,7 +144,7 @@
      <rect>
       <x>890</x>
       <y>40</y>
-      <width>330</width>
+      <width>320</width>
       <height>460</height>
      </rect>
     </property>
