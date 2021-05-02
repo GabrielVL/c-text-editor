@@ -22,7 +22,7 @@ private slots:
     void on_runButton_clicked();
 
     void onServerMessageReceived(QString message);
-    void onClientMessageReceived(QString message);
+//    void onClientMessageReceived(QString message);
 
 private:
     Ui::MainWindow *ui;

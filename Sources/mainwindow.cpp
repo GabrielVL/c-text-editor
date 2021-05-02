@@ -19,15 +19,8 @@ MainWindow::MainWindow(QWidget *parent)
     else
         ui->StdoutList->addItem("Client failed to connect.");
 
-//    m_client2 = new TcpClient(this);
-//    if (m_client2->connectTo("localhost", 21579))
-//        ui->lstClient2->addItem("Connected.");
-//    else
-//        ui->lstClient2->addItem("Failed to connect.");
-
     connect(m_server,  &TcpServer::messageReceived, this, &MainWindow::onServerMessageReceived);
-    connect(m_client1, &TcpClient::messageReceived, this, &MainWindow::onClientMessageReceived);
-//    connect(m_client2, &TcpClient::messageReceived, this, &NetSndRcv::onClient2MessageReceived);
+//    connect(m_client1, &TcpClient::messageReceived, this, &MainWindow::onClientMessageReceived);
 }
 
 MainWindow::~MainWindow()
@@ -39,16 +32,15 @@ MainWindow::~MainWindow()
 void MainWindow::on_runButton_clicked()
 {
     m_client1->sendMessage(ui->TextEditor->toPlainText()); //enviar al servidor
-    ui->StdoutList->addItem(ui->TextEditor->toPlainText());
-//    ui->StdoutBrowser->addItem(ui->StdoutBrowser->text());
+    ui->RamList->addItem(ui->TextEditor->toPlainText()); // muestra lo que le envía al servidor
 }
 
-void MainWindow::onClientMessageReceived(QString message)
-{
-    ui->StdoutList->addItem(message);
-}
+//void MainWindow::onClientMessageReceived(QString message)
+//{
+//    ui->RamList->addItem(message);
+//}
 
 void MainWindow::onServerMessageReceived(QString message)
 {
-    ui->StdoutList->addItem(message);
+    ui->StdoutList->addItem(message); // el servidor devuelve el resultado al cliente
 }
