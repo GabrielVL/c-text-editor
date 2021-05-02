@@ -67,19 +67,19 @@ p, li { white-space: pre-wrap; }
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Stdout</string>
+      <string>Standard Output</string>
      </attribute>
-     <widget class="QTextBrowser" name="textBrowser_3">
+     <widget class="QListWidget" name="StdoutList">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1221</width>
-        <height>220</height>
+        <width>1220</width>
+        <height>192</height>
        </rect>
       </property>
      </widget>
@@ -88,13 +88,13 @@ p, li { white-space: pre-wrap; }
      <attribute name="title">
       <string>Application Log</string>
      </attribute>
-     <widget class="QTextBrowser" name="textBrowser_2">
+     <widget class="QListWidget" name="ApplogList">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1221</width>
-        <height>220</height>
+        <width>1220</width>
+        <height>192</height>
        </rect>
       </property>
      </widget>
