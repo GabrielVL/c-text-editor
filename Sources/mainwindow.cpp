@@ -42,14 +42,9 @@ void MainWindow::on_startButton_clicked()
 void MainWindow::on_runButton_clicked()
 {
     m_client1->sendMessage(ui->TextEditor->toPlainText()); //enviar al servidor
-    ui->RamList->addItem(ui->TextEditor->toPlainText()); // muestra lo que le envía al servidor
+//    ui->RamList->addItem(ui->TextEditor->toPlainText()); // muestra lo que le envía al servidor
 
 }
-
-//void MainWindow::onClientMessageReceived(QString message)
-//{
-//    ui->RamList->addItem(message);
-//}
 
 void MainWindow::onServerMessageReceived(QString message)
 {
