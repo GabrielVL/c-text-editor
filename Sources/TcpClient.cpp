@@ -30,7 +30,7 @@ void TcpClient::onReadyRead()
     QDataStream receive(m_socket);
     receive.setVersion(QDataStream::Qt_4_0);
 
-    if (m_blockSize == 0)  // on first call: only read the block size
+    if (m_blockSize == 0)
     {
         if (m_socket->bytesAvailable() < (int)sizeof(quint16))
             return;
@@ -38,10 +38,8 @@ void TcpClient::onReadyRead()
         receive >> m_blockSize;
     }
 
-    if (m_socket->bytesAvailable() < m_blockSize)   // Partial data received?
+    if (m_socket->bytesAvailable() < m_blockSize)
         return;
-
-    // at this point: all data received, we can process it
 
     QString message;
     receive >> message;
@@ -68,10 +66,9 @@ void TcpClient::sendMessage(QString message)
     QDataStream dataStream(&data, QTcpSocket::WriteOnly);
     dataStream.setVersion(QDataStream::Qt_4_0);
 
-    dataStream << (quint16)0;  // placeholder for blocksize
-    dataStream << message;     // append the message
-    dataStream.device()->seek(0);  // go back to beginning
-    // overwrite placeholder with actual blocksize
+    dataStream << (quint16)0;
+    dataStream << message;
+    dataStream.device()->seek(0);
     dataStream << (quint16)(data.size() - sizeof(quint16));
 
     m_socket->write(data);
