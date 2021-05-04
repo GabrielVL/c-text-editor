@@ -28,6 +28,8 @@ private:
      */
     TcpClient *m_client1;
 
+    Reader reader;
+
 public:
     /**
      * Crea la interfaz de la ventana principal del IDE

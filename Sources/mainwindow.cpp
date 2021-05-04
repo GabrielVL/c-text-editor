@@ -48,5 +48,13 @@ void MainWindow::on_runButton_clicked()
 
 void MainWindow::onServerMessageReceived(QString message)
 {
+    std::string stdMessage = message.toUtf8().constData();
+    std::vector<std::string::size_type> types = reader.find_type(stdMessage);
+    QString a = QString::fromStdString("a");
+    for (std::string::size_type i:types) {
+//        std::string typei = types[i];
+//        ui->StdoutList->addItem(QString::fromStdString());
+        ui->StdoutList->addItem(a);
+    }
     ui->StdoutList->addItem(message); // el servidor devuelve el resultado al cliente
 }

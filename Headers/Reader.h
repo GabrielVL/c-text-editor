@@ -12,11 +12,12 @@ class Reader {
 
 private:
 
-    std::string readInput;
+    const std::string dataArray[5] = {"int", "long", "char", "float", "double"};
 
 public:
-    Reader(const std::string &readInput);
+    virtual ~Reader();
 
+    std::vector<std::string::size_type> find_type(std::string &readInput);
 };
 
 
