@@ -1,19 +1,19 @@
-\hypertarget{classTcpClient}{}\doxysection{Tcp\+Client Class Reference}
+\hypertarget{classTcpClient}{}\doxysection{Referencia de la Clase Tcp\+Client}
 \label{classTcpClient}\index{TcpClient@{TcpClient}}
 
 
-Inheritance diagram for Tcp\+Client\+:
+Diagrama de herencias de Tcp\+Client
 % FIG 0
 
 
-Collaboration diagram for Tcp\+Client\+:
+Diagrama de colaboración para Tcp\+Client\+:
 % FIG 1
-\doxysubsection*{Signals}
+\doxysubsection*{Señales}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{classTcpClient_ae4346e8d0426f772ba0987d5283df48b}{message\+Received}} (Q\+String message)
 \end{DoxyCompactItemize}
-\doxysubsection*{Public Member Functions}
+\doxysubsection*{Métodos públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}{Tcp\+Client}} (Q\+Object $\ast$parent=nullptr)
@@ -26,16 +26,32 @@ void \mbox{\hyperlink{classTcpClient_a1771ee611d1e73ed063ddcb3de3fea6c}{send\+Me
 \item 
 bool \mbox{\hyperlink{classTcpClient_aae60f3beac0491dfcf8a4f213ea14ff5}{connect\+To}} (Q\+String host, quint16 port)
 \end{DoxyCompactItemize}
+\doxysubsection*{Slots privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTcpClient_aa4d3a74fc6a970742dc0c412733689e5}{on\+Ready\+Read}} ()
+\item 
+void \mbox{\hyperlink{classTcpClient_a13c6c7d38fd2be50d93f6966291f5fc2}{on\+Disconnected}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Tcp\+Socket $\ast$ \mbox{\hyperlink{classTcpClient_a741958f95d099d2a8c0320d3fba9041e}{m\+\_\+socket}}
+\item 
+quint16 \mbox{\hyperlink{classTcpClient_ac28bbc692e71ee45ebba4d5b79327c7d}{m\+\_\+block\+Size}} = 0
+\item 
+bool \mbox{\hyperlink{classTcpClient_a7d4ea24b270a6d688adf6f8ddb3c4fb4}{m\+\_\+is\+Valid}}
+\end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
+\doxysubsection{Descripción detallada}
 
 
-Definition at line 14 of file Tcp\+Client.\+h.
+Definición en la línea 14 del archivo Tcp\+Client.\+h.
 
 
 
-\doxysubsection{Constructor \& Destructor Documentation}
+\doxysubsection{Documentación del constructor y destructor}
 \mbox{\Hypertarget{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}\label{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}} 
 \index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
 \index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
@@ -43,7 +59,7 @@ Definition at line 14 of file Tcp\+Client.\+h.
 {\footnotesize\ttfamily Tcp\+Client\+::\+Tcp\+Client (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 Se crea el cliente junto con el socket 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em parent} & Hereda de Q\+Object \\
 \hline
 \end{DoxyParams}
@@ -58,7 +74,7 @@ Se crea el cliente junto con el socket
 para uso del cliente 
 
 Crea un cliente aceptando un socket 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em parent} & Hereda de Q\+Object \\
 \hline
 {\em socket} & Socket heredado \\
@@ -66,7 +82,7 @@ Crea un cliente aceptando un socket
 \end{DoxyParams}
 
 
-\doxysubsection{Member Function Documentation}
+\doxysubsection{Documentación de las funciones miembro}
 \mbox{\Hypertarget{classTcpClient_aae60f3beac0491dfcf8a4f213ea14ff5}\label{classTcpClient_aae60f3beac0491dfcf8a4f213ea14ff5}} 
 \index{TcpClient@{TcpClient}!connectTo@{connectTo}}
 \index{connectTo@{connectTo}!TcpClient@{TcpClient}}
@@ -74,13 +90,13 @@ Crea un cliente aceptando un socket
 {\footnotesize\ttfamily bool Tcp\+Client\+::connect\+To (\begin{DoxyParamCaption}\item[{Q\+String}]{host,  }\item[{quint16}]{port }\end{DoxyParamCaption})}
 
 Busca un server a conectar 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em host} & Dirección IP del server anfitrión \\
 \hline
 {\em port} & Número del puerto donde está conectado el server \\
 \hline
 \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
+\begin{DoxyReturn}{Devuelve}
 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTcpClient_a5e9ef69f7edf553fad1e10ce9f786223}\label{classTcpClient_a5e9ef69f7edf553fad1e10ce9f786223}} 
@@ -93,7 +109,7 @@ Busca un server a conectar
 
 para uso del cliente 
 
-Verifica si el cliente es válido \begin{DoxyReturn}{Returns}
+Verifica si el cliente es válido \begin{DoxyReturn}{Devuelve}
 booleano 
 \end{DoxyReturn}
 \mbox{\Hypertarget{classTcpClient_ae4346e8d0426f772ba0987d5283df48b}\label{classTcpClient_ae4346e8d0426f772ba0987d5283df48b}} 
@@ -103,23 +119,68 @@ booleano
 {\footnotesize\ttfamily void Tcp\+Client\+::message\+Received (\begin{DoxyParamCaption}\item[{Q\+String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
 Confirma que el mensaje ha sido recibido 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em message} & \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classTcpClient_a1771ee611d1e73ed063ddcb3de3fea6c}\label{classTcpClient_a1771ee611d1e73ed063ddcb3de3fea6c}} 
+\mbox{\Hypertarget{classTcpClient_a13c6c7d38fd2be50d93f6966291f5fc2}\label{classTcpClient_a13c6c7d38fd2be50d93f6966291f5fc2}} 
+\index{TcpClient@{TcpClient}!onDisconnected@{onDisconnected}}
+\index{onDisconnected@{onDisconnected}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{onDisconnected}{onDisconnected}}
+{\footnotesize\ttfamily void Tcp\+Client\+::on\+Disconnected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Desconecta el cliente \mbox{\Hypertarget{classTcpClient_aa4d3a74fc6a970742dc0c412733689e5}\label{classTcpClient_aa4d3a74fc6a970742dc0c412733689e5}} 
+\index{TcpClient@{TcpClient}!onReadyRead@{onReadyRead}}
+\index{onReadyRead@{onReadyRead}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{onReadyRead}{onReadyRead}}
+{\footnotesize\ttfamily void Tcp\+Client\+::on\+Ready\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Procesa los datos que recibe del cliente \mbox{\Hypertarget{classTcpClient_a1771ee611d1e73ed063ddcb3de3fea6c}\label{classTcpClient_a1771ee611d1e73ed063ddcb3de3fea6c}} 
 \index{TcpClient@{TcpClient}!sendMessage@{sendMessage}}
 \index{sendMessage@{sendMessage}!TcpClient@{TcpClient}}
 \doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
 {\footnotesize\ttfamily void Tcp\+Client\+::send\+Message (\begin{DoxyParamCaption}\item[{Q\+String}]{message }\end{DoxyParamCaption})}
 
 Envía un mensaje al server 
-\begin{DoxyParams}{Parameters}
+\begin{DoxyParams}{Parámetros}
 {\em message} & \\
 \hline
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classTcpClient_ac28bbc692e71ee45ebba4d5b79327c7d}\label{classTcpClient_ac28bbc692e71ee45ebba4d5b79327c7d}} 
+\index{TcpClient@{TcpClient}!m\_blockSize@{m\_blockSize}}
+\index{m\_blockSize@{m\_blockSize}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{m\_blockSize}{m\_blockSize}}
+{\footnotesize\ttfamily quint16 Tcp\+Client\+::m\+\_\+block\+Size = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+Tamaño del mensaje 
+
+Definición en la línea 25 del archivo Tcp\+Client.\+h.
+
+\mbox{\Hypertarget{classTcpClient_a7d4ea24b270a6d688adf6f8ddb3c4fb4}\label{classTcpClient_a7d4ea24b270a6d688adf6f8ddb3c4fb4}} 
+\index{TcpClient@{TcpClient}!m\_isValid@{m\_isValid}}
+\index{m\_isValid@{m\_isValid}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{m\_isValid}{m\_isValid}}
+{\footnotesize\ttfamily bool Tcp\+Client\+::m\+\_\+is\+Valid\hspace{0.3cm}{\ttfamily [private]}}
+
+Verifica si es válido 
+
+Definición en la línea 29 del archivo Tcp\+Client.\+h.
+
+\mbox{\Hypertarget{classTcpClient_a741958f95d099d2a8c0320d3fba9041e}\label{classTcpClient_a741958f95d099d2a8c0320d3fba9041e}} 
+\index{TcpClient@{TcpClient}!m\_socket@{m\_socket}}
+\index{m\_socket@{m\_socket}!TcpClient@{TcpClient}}
+\doxysubsubsection{\texorpdfstring{m\_socket}{m\_socket}}
+{\footnotesize\ttfamily Q\+Tcp\+Socket$\ast$ Tcp\+Client\+::m\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+Conexión entre el server y el socket 
+
+Definición en la línea 21 del archivo Tcp\+Client.\+h.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
 \item 
 Tcp\+Client.\+h\end{DoxyCompactItemize}

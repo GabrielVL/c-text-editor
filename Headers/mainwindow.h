@@ -5,6 +5,7 @@
 
 #include "TcpServer.h"
 #include "TcpClient.h"
+#include "Reader.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -48,7 +49,7 @@ private slots:
      */
     void on_runButton_clicked();
     /**
-     * Función donde el server recibe el mensaje del cliente y lo altera
+     * Función donde el server recibe el mensaje del cliente y lo altera en el reader
      * @param message Mensaje a modificar
      */
     void onServerMessageReceived(QString message);
