@@ -20,13 +20,17 @@ public:
     int scope;
     int references;
 
+    //Constructor
     storedData(){
         std::string clientsInfo = "int.numb.3";
     }
-    void inputAnalizer(){
+
+    //Analyzes de String that comes from the client in order to check if meets the requirements.
+    void inputAnalyzer(){
 
     }
 
+    //If the input meet the requirements it splits it to check what has been sent.
     std::string strSplitter(std::string inStr){
         int strLength = inStr.length();
         int firstSepPos = inStr.find("-");
@@ -43,6 +47,7 @@ public:
 private:
 };
 
+//Manages the memory to send the info to the client.
 class MemoryManager{
 public:
 
