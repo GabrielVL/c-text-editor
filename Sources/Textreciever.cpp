@@ -22,15 +22,12 @@ public:
 
     storedData(){
         std::string clientsInfo = "int.numb.3";
-        //char* splitted = strtok(reinterpret_cast<char *>(clientsInfo), ".")
-
     }
     void inputAnalizer(){
 
     }
 
     std::string strSplitter(std::string inStr){
-        inStr = "float-terminator-0.0";
         int strLength = inStr.length();
         int firstSepPos = inStr.find("-");
         int secSepPos = inStr.rfind("-");
@@ -42,11 +39,6 @@ public:
         std::cout << "Pos one: " << firstSepPos << ", Pos two: " << secSepPos << std::endl;
         std::cout << s1 << " " << s2 << " " << s3 << " \n";
     }
-
-    /*std::string strSplitter(std::string inStr){
-        int strLength = inStr.length();
-        0
-    }*/
 
 private:
 };
@@ -67,5 +59,5 @@ long get_mem_usage(){
 int main(){
     //printf("usage: %ld\n", get_mem_usage());
     storedData* x = new storedData();
-    x->strSplitter("Hello");
+    x->strSplitter("float-terminator-0.0");
 }
