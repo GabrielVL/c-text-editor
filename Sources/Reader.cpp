@@ -5,10 +5,13 @@
 #include <vector>
 #include <iostream>
 #include "../Headers/Reader.h"
+Reader::Reader() {
+    stringVector.push_back("");
+    stringVector.push_back("");
+    stringVector.push_back("");
+}
 
 Reader::~Reader() = default;
-
-
 
 void Reader::strSplitter(std::string inStr) {
     int strLength = inStr.length();
@@ -19,9 +22,9 @@ void Reader::strSplitter(std::string inStr) {
     std::string s2 = inStr.substr(firstSepPos+1, (secSepPos - (firstSepPos+1)));
     std::string s3 = inStr.substr(secSepPos+1,strLength-1);
 
-    stringVector.push_back(s1);
-    stringVector.push_back(s2);
-    stringVector.push_back(s3);
+    stringVector[0] = s1;
+    stringVector[1] = s2;
+    stringVector[2] = s3;
     confirmData();
 }
 
@@ -36,8 +39,14 @@ void Reader::confirmData() {
         stringVector[0] = "Tipo: " + stringVector[0];
         stringVector[1] = "Etiqueta: " + stringVector[1];
         stringVector[2] = "Valor: " + stringVector[2];
+        while (stringVector.size() > 3) {
+            stringVector.pop_back();
+        }
     } else {
         stringVector.insert(stringVector.begin(), "Error");
+        while (stringVector.size() > 4) {
+            stringVector.pop_back();
+        }
     }
 }
 

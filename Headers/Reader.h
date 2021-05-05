@@ -22,9 +22,14 @@ private:
     const std::string dataArray[5] = {"int", "long", "char", "float", "double"};
 
 public:
+    Reader();
+
     virtual ~Reader();
+
     void strSplitter(std::string inStr);
+
     void confirmData();
+
     const std::vector<std::string> &getStringVector() const;
 };
 

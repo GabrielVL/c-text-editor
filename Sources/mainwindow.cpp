@@ -1,3 +1,5 @@
+#include <iostream>
+#include <sstream>
 #include "../Headers/mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -51,14 +53,18 @@ void MainWindow::onServerMessageReceived(QString message)
     ui->RamList->clear();
     ui->StdoutList->clear();
     std::string stdMessage = message.toUtf8().constData();
-    Reader read;
-    read.strSplitter(stdMessage);
-    if (read.getStringVector()[0] != "Error") {
-        for (std::string printString: read.getStringVector()) {
-            ui->RamList->addItem(QString::fromStdString(printString));
+    std::istringstream allText(stdMessage);
+    std::string line;
+    while (getline(allText, line)) {
+        read->strSplitter(line);
+        if (read->getStringVector()[0] != "Error") {
+            for (std::string printString: read->getStringVector()) {
+                ui->RamList->addItem(QString::fromStdString(printString));
+            }
+            ui->RamList->addItem(" ");
+        } else {
+            ui->StdoutList->addItem(QString::fromStdString(read->getStringVector()[0]));
+            ui->ApplogList->addItem(QString::fromStdString(read->getStringVector()[0]));
         }
-    } else {
-        ui->StdoutList->addItem(QString::fromStdString(read.getStringVector()[0]));
-        ui->ApplogList->addItem(QString::fromStdString(read.getStringVector()[0]));
     }
 }

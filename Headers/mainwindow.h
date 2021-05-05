@@ -27,8 +27,10 @@ private:
      * Objeto cliente de QT
      */
     TcpClient *m_client1;
-
-    Reader reader;
+    /**
+     * Lee e interpreta strings que vienen del editor
+     */
+    Reader *read = new Reader();
 
 public:
     /**
