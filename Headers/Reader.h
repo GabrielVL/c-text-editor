@@ -18,16 +18,14 @@ private:
     int scope;
     int references;
 
+    std::vector<std::string> stringVector;
     const std::string dataArray[5] = {"int", "long", "char", "float", "double"};
 
 public:
-    Reader();
-
     virtual ~Reader();
-
-    std::vector<std::string> strSplitter(std::string inStr);
-
-//    std::vector<std::string::size_type> find_type(std::string &readInput);
+    void strSplitter(std::string inStr);
+    void confirmData();
+    const std::vector<std::string> &getStringVector() const;
 };
 
 
