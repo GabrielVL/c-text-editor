@@ -2,7 +2,7 @@
 // Created by mauro on 4/28/21.
 //
 
-#include "Textreciever.h"
+#include "../Headers/Textreciever.h"
 #include <iostream>
 #include <stdlib.h>
 #include <string.h>
@@ -13,12 +13,6 @@
 
 class storedData{
 public:
-
-    std::string type;
-    std::string name;
-    std::string value;
-    int scope;
-    int references;
 
     //Constructor
     storedData(){
@@ -63,6 +57,5 @@ long get_mem_usage(){
 
 int main(){
     //printf("usage: %ld\n", get_mem_usage());
-    storedData* x = new storedData();
-    x->strSplitter("float-terminator-0.0");
+
 }

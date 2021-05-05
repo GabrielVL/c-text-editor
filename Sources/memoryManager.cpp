@@ -3,7 +3,7 @@
 //
 
 #include<iostream>
-#include "../Header/memoryManager.cpp.h"
+#include "../Headers/memoryManager.h"
 
 
 memoryManager::memoryManager(){
