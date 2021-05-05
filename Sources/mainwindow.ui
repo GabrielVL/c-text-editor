@@ -113,7 +113,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="PortLine"/>
+      <widget class="QLineEdit" name="PortLine">
+       <property name="text">
+        <string>8080</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="label_2">
