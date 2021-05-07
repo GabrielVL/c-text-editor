@@ -57,7 +57,7 @@ void MainWindow::onServerMessageReceived(QString message)
     std::string line;
     while (getline(allText, line)) {
         read->strSplitter(line);
-        if (read->getStringVector()[0] != "Error") {
+        if (read->getStringVector()[0] != "Type Error") {
             for (std::string printString: read->getStringVector()) {
                 ui->RamList->addItem(QString::fromStdString(printString));
             }

@@ -43,7 +43,7 @@ void Reader::confirmData() {
             stringVector.pop_back();
         }
     } else {
-        stringVector.insert(stringVector.begin(), "Error");
+        stringVector.insert(stringVector.begin(), "Type Error");
         while (stringVector.size() > 4) {
             stringVector.pop_back();
         }
