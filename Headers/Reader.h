@@ -18,8 +18,8 @@ private:
     int scope;
     int references;
 
-    std::vector<std::string> stringVector;
-    const std::string dataArray[5] = {"int", "long", "char", "float", "double"};
+    std::vector<std::string> TextEditorLine;
+    const std::string typeArray[5] = {"char", "int", "long", "float", "double"};
 
 public:
     Reader();
@@ -28,7 +28,7 @@ public:
 
     void strSplitter(std::string inStr);
 
-    void confirmData();
+    void confirmType();
 
     const std::vector<std::string> &getStringVector() const;
 };

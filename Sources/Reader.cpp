@@ -6,9 +6,9 @@
 #include <iostream>
 #include "../Headers/Reader.h"
 Reader::Reader() {
-    stringVector.push_back("");
-    stringVector.push_back("");
-    stringVector.push_back("");
+    TextEditorLine.push_back("");
+    TextEditorLine.push_back("");
+    TextEditorLine.push_back("");
 }
 
 Reader::~Reader() = default;
@@ -22,34 +22,65 @@ void Reader::strSplitter(std::string inStr) {
     std::string s2 = inStr.substr(firstSepPos+1, (secSepPos - (firstSepPos+1)));
     std::string s3 = inStr.substr(secSepPos+1,strLength-1);
 
-    stringVector[0] = s1;
-    stringVector[1] = s2;
-    stringVector[2] = s3;
-    confirmData();
+    TextEditorLine[0] = s1;
+    TextEditorLine[1] = s2;
+    TextEditorLine[2] = s3;
+    confirmType();
 }
 
-void Reader::confirmData() {
-    bool trueDataType = false;
-    for (std::string data : dataArray) {
-        if (data == stringVector[0]) {
-            trueDataType = true;
+void Reader::confirmType() {
+    bool isType = false;
+    bool isOneDot = false;
+    bool isNum = true;
+    for (std::string data : typeArray) {
+        if (data == TextEditorLine[0]) {
+            if (data == "char") {
+                if (TextEditorLine[2].length() == 1) {
+                    isType = true;
+                    break;
+                }
+            } else { // int, long, float & double
+                for (char const &digit : TextEditorLine[2]) {
+                    if (!std::isdigit(digit)) {
+                        isNum = false;
+                    }
+                    if (digit == '.' && (data == "float" || data == "double")) {
+                        isNum = true;
+                        if (!isOneDot) {
+                            isOneDot = true;
+                        } else {
+                            isNum = false;
+                            break;
+                        }
+                    }
+                }
+                if (isNum) {
+                    isType = true;
+                    if (data == "float" || data == "double") {
+                        if (!isOneDot) {
+                            TextEditorLine[2] = TextEditorLine[2].append(".0");
+                        }
+                    }
+                }
+                break;
+            }
         }
     }
-    if (trueDataType) {
-        stringVector[0] = "Tipo: " + stringVector[0];
-        stringVector[1] = "Etiqueta: " + stringVector[1];
-        stringVector[2] = "Valor: " + stringVector[2];
-        while (stringVector.size() > 3) {
-            stringVector.pop_back();
+    if (isType) {
+        TextEditorLine[0] = "Tipo: " + TextEditorLine[0];
+        TextEditorLine[1] = "Etiqueta: " + TextEditorLine[1];
+        TextEditorLine[2] = "Valor: " + TextEditorLine[2];
+        while (TextEditorLine.size() > 3) {
+            TextEditorLine.pop_back();
         }
     } else {
-        stringVector.insert(stringVector.begin(), "Type Error");
-        while (stringVector.size() > 4) {
-            stringVector.pop_back();
+        TextEditorLine.insert(TextEditorLine.begin(), "Type Error");
+        while (TextEditorLine.size() > 4) {
+            TextEditorLine.pop_back();
         }
     }
 }
 
 const std::vector<std::string> &Reader::getStringVector() const {
-    return stringVector;
+    return TextEditorLine;
 }
