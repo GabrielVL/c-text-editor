@@ -4,6 +4,7 @@
 
 #include <vector>
 #include <iostream>
+#include <sstream>
 #include "../Headers/Reader.h"
 Reader::Reader() {
     TextEditorLine.push_back("");
@@ -44,7 +45,7 @@ void Reader::confirmType() {
                     if (!std::isdigit(digit)) {
                         isNum = false;
                     }
-                    if (digit == '.' && (data == "float" || data == "double")) {
+                    if (digit == ',' && (data == "float" || data == "double")) {
                         isNum = true;
                         if (!isOneDot) {
                             isOneDot = true;
@@ -55,12 +56,14 @@ void Reader::confirmType() {
                     }
                 }
                 if (isNum) {
-                    isType = true;
                     if (data == "float" || data == "double") {
-                        if (!isOneDot) {
-                            TextEditorLine[2] = TextEditorLine[2].append(".0");
-                        }
+                        double deleteZeroesDouble = atof(TextEditorLine[2].c_str());
+                        TextEditorLine[2] = std::to_string(deleteZeroesDouble);
+                    } else {
+                        long deleteZeroesLong = std::stol(TextEditorLine[2]);
+                        TextEditorLine[2] = std::to_string(deleteZeroesLong);
                     }
+                    isType = true;
                 }
                 break;
             }
