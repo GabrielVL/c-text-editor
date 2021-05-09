@@ -10,46 +10,56 @@
 #include <QTcpSocket>
 #include <QString>
 
-
+/**
+ * Clase cliente que le envía datos crudos del editor de texto al server
+ */
 class TcpClient : public QObject{
     Q_OBJECT
 
 private:
+
     /**
      * Conexión entre el server y el socket
      */
     QTcpSocket *m_socket;
+
     /**
      * Tamaño del mensaje
      */
     quint16 m_blockSize = 0;
+
     /**
      * Verifica si es válido
      */
     bool m_isValid;
 
 public:
+
     /**
      * Se crea el cliente junto con el socket
      * @param parent Hereda de QObject
      */
-    explicit TcpClient(QObject *parent = nullptr);    /// para uso del cliente
+    explicit TcpClient(QObject *parent = nullptr);
+
     /**
      * Crea un cliente aceptando un socket
      * @param parent Hereda de QObject
      * @param socket Socket heredado
      */
-    TcpClient(QObject *parent, QTcpSocket *socket);   /// para uso del cliente
+    TcpClient(QObject *parent, QTcpSocket *socket);
+
     /**
      * Verifica si el cliente es válido
      * @return booleano
      */
     const bool &isValid();
+
     /**
      * Envía un mensaje al server
      * @param message
      */
     void sendMessage(QString message);
+
     /**
      * Busca un server a conectar
      * @param host Dirección IP del server anfitrión
@@ -59,6 +69,7 @@ public:
     bool connectTo(QString host, quint16 port);
 
 signals:
+
     /**
      * Confirma que el mensaje ha sido recibido
      * @param message
@@ -66,10 +77,12 @@ signals:
     void messageReceived(QString message);
 
 private slots:
+
     /**
      * Procesa los datos que recibe del cliente
      */
     void onReadyRead();
+
     /**
      * Desconecta el cliente
      */

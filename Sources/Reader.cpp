@@ -55,7 +55,10 @@ void Reader::confirmType() {
                         }
                     }
                 }
-                isType = deleteZeroes(isNum, data);
+                if (isNum) {
+                    deleteZeroes(data);
+                    isType = true;
+                }
                 break;
             }
         }
@@ -63,18 +66,13 @@ void Reader::confirmType() {
     labelObject(isType);
 }
 
-bool Reader::deleteZeroes(bool isNum, const std::string &data) {
-    if (isNum) {
-        if (data == "float" || data == "double") {
-            double deleteZeroesDouble = atof(TextEditorLine[2].c_str());
-            TextEditorLine[2] = std::to_string(deleteZeroesDouble);
-        } else {
-            long deleteZeroesLong = std::stol(TextEditorLine[2]);
-            TextEditorLine[2] = std::to_string(deleteZeroesLong);
-        }
-        return true;
+void Reader::deleteZeroes(const std::string &data) {
+    if (data == "float" || data == "double") {
+        double deleteZeroesDouble = atof(TextEditorLine[2].c_str());
+        TextEditorLine[2] = std::to_string(deleteZeroesDouble);
     } else {
-        return false;
+        long deleteZeroesLong = std::stol(TextEditorLine[2]);
+        TextEditorLine[2] = std::to_string(deleteZeroesLong);
     }
 }
 
