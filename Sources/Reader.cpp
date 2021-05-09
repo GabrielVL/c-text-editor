@@ -55,20 +55,30 @@ void Reader::confirmType() {
                         }
                     }
                 }
-                if (isNum) {
-                    if (data == "float" || data == "double") {
-                        double deleteZeroesDouble = atof(TextEditorLine[2].c_str());
-                        TextEditorLine[2] = std::to_string(deleteZeroesDouble);
-                    } else {
-                        long deleteZeroesLong = std::stol(TextEditorLine[2]);
-                        TextEditorLine[2] = std::to_string(deleteZeroesLong);
-                    }
-                    isType = true;
-                }
+                isType = deleteZeroes(isNum, data);
                 break;
             }
         }
     }
+    labelObject(isType);
+}
+
+bool Reader::deleteZeroes(bool isNum, const std::string &data) {
+    if (isNum) {
+        if (data == "float" || data == "double") {
+            double deleteZeroesDouble = atof(TextEditorLine[2].c_str());
+            TextEditorLine[2] = std::to_string(deleteZeroesDouble);
+        } else {
+            long deleteZeroesLong = std::stol(TextEditorLine[2]);
+            TextEditorLine[2] = std::to_string(deleteZeroesLong);
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
+
+void Reader::labelObject(bool isType) {
     if (isType) {
         TextEditorLine[0] = "Tipo: " + TextEditorLine[0];
         TextEditorLine[1] = "Etiqueta: " + TextEditorLine[1];

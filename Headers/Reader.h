@@ -31,6 +31,10 @@ public:
     void confirmType();
 
     const std::vector<std::string> &getStringVector() const;
+
+    void labelObject(bool isType);
+
+    bool deleteZeroes(bool isNum, const std::string &data);
 };
 
 
