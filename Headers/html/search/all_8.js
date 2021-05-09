@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7emainwindow_23',['~MainWindow',['../classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7',1,'MainWindow']]]
+  ['read_23',['read',['../classMainWindow.html#a80196f2190796ed767e0a268817c1e9c',1,'MainWindow']]],
+  ['reader_24',['Reader',['../classReader.html',1,'Reader'],['../classReader.html#adcda31b507720ab44044d7a21686fba2',1,'Reader::Reader()']]]
 ];

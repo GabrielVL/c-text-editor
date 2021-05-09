@@ -2,6 +2,10 @@
 \label{classTcpClient}\index{TcpClient@{TcpClient}}
 
 
+{\ttfamily \#include $<$Tcp\+Client.\+h$>$}
+
+
+
 Diagrama de herencias de Tcp\+Client
 % FIG 0
 
@@ -19,9 +23,9 @@ void \mbox{\hyperlink{classTcpClient_ae4346e8d0426f772ba0987d5283df48b}{message\
 \mbox{\hyperlink{classTcpClient_a135f8e77b7d681ec99077774e2c8949c}{Tcp\+Client}} (Q\+Object $\ast$parent=nullptr)
 \item 
 \mbox{\hyperlink{classTcpClient_a5f330da5607a9ff16ddfa5fbde59a9fa}{Tcp\+Client}} (Q\+Object $\ast$parent, Q\+Tcp\+Socket $\ast$socket)
-\begin{DoxyCompactList}\small\item\em para uso del cliente \end{DoxyCompactList}\item 
+\item 
 const bool \& \mbox{\hyperlink{classTcpClient_a5e9ef69f7edf553fad1e10ce9f786223}{is\+Valid}} ()
-\begin{DoxyCompactList}\small\item\em para uso del cliente \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classTcpClient_a1771ee611d1e73ed063ddcb3de3fea6c}{send\+Message}} (Q\+String message)
 \item 
 bool \mbox{\hyperlink{classTcpClient_aae60f3beac0491dfcf8a4f213ea14ff5}{connect\+To}} (Q\+String host, quint16 port)
@@ -45,9 +49,9 @@ bool \mbox{\hyperlink{classTcpClient_a7d4ea24b270a6d688adf6f8ddb3c4fb4}{m\+\_\+i
 
 
 \doxysubsection{Descripción detallada}
+Clase cliente que le envía datos crudos del editor de texto al server 
 
-
-Definición en la línea 14 del archivo Tcp\+Client.\+h.
+Definición en la línea 16 del archivo Tcp\+Client.\+h.
 
 
 
@@ -68,10 +72,6 @@ Se crea el cliente junto con el socket
 \index{TcpClient@{TcpClient}!TcpClient@{TcpClient}}
 \doxysubsubsection{\texorpdfstring{TcpClient()}{TcpClient()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily Tcp\+Client\+::\+Tcp\+Client (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent,  }\item[{Q\+Tcp\+Socket $\ast$}]{socket }\end{DoxyParamCaption})}
-
-
-
-para uso del cliente 
 
 Crea un cliente aceptando un socket 
 \begin{DoxyParams}{Parámetros}
@@ -104,10 +104,6 @@ Busca un server a conectar
 \index{isValid@{isValid}!TcpClient@{TcpClient}}
 \doxysubsubsection{\texorpdfstring{isValid()}{isValid()}}
 {\footnotesize\ttfamily const bool\& Tcp\+Client\+::is\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-para uso del cliente 
 
 Verifica si el cliente es válido \begin{DoxyReturn}{Devuelve}
 booleano 
@@ -157,7 +153,7 @@ Envía un mensaje al server
 
 Tamaño del mensaje 
 
-Definición en la línea 25 del archivo Tcp\+Client.\+h.
+Definición en la línea 29 del archivo Tcp\+Client.\+h.
 
 \mbox{\Hypertarget{classTcpClient_a7d4ea24b270a6d688adf6f8ddb3c4fb4}\label{classTcpClient_a7d4ea24b270a6d688adf6f8ddb3c4fb4}} 
 \index{TcpClient@{TcpClient}!m\_isValid@{m\_isValid}}
@@ -167,7 +163,7 @@ Definición en la línea 25 del archivo Tcp\+Client.\+h.
 
 Verifica si es válido 
 
-Definición en la línea 29 del archivo Tcp\+Client.\+h.
+Definición en la línea 34 del archivo Tcp\+Client.\+h.
 
 \mbox{\Hypertarget{classTcpClient_a741958f95d099d2a8c0320d3fba9041e}\label{classTcpClient_a741958f95d099d2a8c0320d3fba9041e}} 
 \index{TcpClient@{TcpClient}!m\_socket@{m\_socket}}
@@ -177,7 +173,7 @@ Definición en la línea 29 del archivo Tcp\+Client.\+h.
 
 Conexión entre el server y el socket 
 
-Definición en la línea 21 del archivo Tcp\+Client.\+h.
+Definición en la línea 24 del archivo Tcp\+Client.\+h.
 
 
 

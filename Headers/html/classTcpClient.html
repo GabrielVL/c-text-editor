@@ -71,6 +71,8 @@ $(function() {
 <div class="title">Referencia de la Clase TcpClient</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de TcpClient</div>
 <div class="dyncontent">
@@ -94,10 +96,8 @@ Métodos públicos</h2></td></tr>
 <tr class="memitem:a135f8e77b7d681ec99077774e2c8949c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTcpClient.html#a135f8e77b7d681ec99077774e2c8949c">TcpClient</a> (QObject *parent=nullptr)</td></tr>
 <tr class="separator:a135f8e77b7d681ec99077774e2c8949c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f330da5607a9ff16ddfa5fbde59a9fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTcpClient.html#a5f330da5607a9ff16ddfa5fbde59a9fa">TcpClient</a> (QObject *parent, QTcpSocket *socket)</td></tr>
-<tr class="memdesc:a5f330da5607a9ff16ddfa5fbde59a9fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">para uso del cliente  <a href="classTcpClient.html#a5f330da5607a9ff16ddfa5fbde59a9fa">Más...</a><br /></td></tr>
 <tr class="separator:a5f330da5607a9ff16ddfa5fbde59a9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e9ef69f7edf553fad1e10ce9f786223"><td class="memItemLeft" align="right" valign="top">const bool &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTcpClient.html#a5e9ef69f7edf553fad1e10ce9f786223">isValid</a> ()</td></tr>
-<tr class="memdesc:a5e9ef69f7edf553fad1e10ce9f786223"><td class="mdescLeft">&#160;</td><td class="mdescRight">para uso del cliente  <a href="classTcpClient.html#a5e9ef69f7edf553fad1e10ce9f786223">Más...</a><br /></td></tr>
 <tr class="separator:a5e9ef69f7edf553fad1e10ce9f786223"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1771ee611d1e73ed063ddcb3de3fea6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classTcpClient.html#a1771ee611d1e73ed063ddcb3de3fea6c">sendMessage</a> (QString message)</td></tr>
 <tr class="separator:a1771ee611d1e73ed063ddcb3de3fea6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,8 +121,9 @@ Atributos privados</h2></td></tr>
 <tr class="separator:a7d4ea24b270a6d688adf6f8ddb3c4fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00014">14</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
+<div class="textblock"><p>Clase cliente que le envía datos crudos del editor de texto al server </p>
+
+<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00016">16</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a135f8e77b7d681ec99077774e2c8949c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a135f8e77b7d681ec99077774e2c8949c">&#9670;&nbsp;</a></span>TcpClient() <span class="overload">[1/2]</span></h2>
@@ -181,8 +182,6 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>para uso del cliente </p>
 <p>Crea un cliente aceptando un socket </p><dl class="params"><dt>Parámetros</dt><dd>
   <table class="params">
     <tr><td class="paramname">parent</td><td>Hereda de QObject </td></tr>
@@ -244,8 +243,6 @@ Atributos privados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>para uso del cliente </p>
 <p>Verifica si el cliente es válido </p><dl class="section return"><dt>Devuelve</dt><dd>booleano </dd></dl>
 
 </div>
@@ -380,7 +377,7 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 <p>Tamaño del mensaje </p>
 
-<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00025">25</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00029">29</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
 
 </div>
 </div>
@@ -405,7 +402,7 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 <p>Verifica si es válido </p>
 
-<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00029">29</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00034">34</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
 
 </div>
 </div>
@@ -430,7 +427,7 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 <p>Conexión entre el server y el socket </p>
 
-<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00021">21</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="TcpClient_8h_source.html#l00024">24</a> del archivo <a class="el" href="TcpClient_8h_source.html">TcpClient.h</a>.</p>
 
 </div>
 </div>

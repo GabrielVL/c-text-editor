@@ -2,6 +2,10 @@
 \label{classMainWindow}\index{MainWindow@{MainWindow}}
 
 
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
 Diagrama de herencias de Main\+Window
 % FIG 0
 
@@ -33,15 +37,14 @@ Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{classMainWindow_a35466a70ed47252a01
 \item 
 \mbox{\hyperlink{classTcpClient}{Tcp\+Client}} $\ast$ \mbox{\hyperlink{classMainWindow_a924bc6567273b3cdc39a83490fca6a15}{m\+\_\+client1}}
 \item 
-\mbox{\Hypertarget{classMainWindow_af3bc5329b535757441c096a51cc11df3}\label{classMainWindow_af3bc5329b535757441c096a51cc11df3}} 
-\mbox{\hyperlink{classReader}{Reader}} {\bfseries reader}
+\mbox{\hyperlink{classReader}{Reader}} $\ast$ \mbox{\hyperlink{classMainWindow_a80196f2190796ed767e0a268817c1e9c}{read}} = new \mbox{\hyperlink{classReader}{Reader}}()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Descripción detallada}
+Ventana principal del I\+DE que contiene el editor de texto, R\+AM Live View, Standard Output y el Application Log 
 
-
-Definición en la línea 14 del archivo mainwindow.\+h.
+Definición en la línea 17 del archivo mainwindow.\+h.
 
 
 
@@ -100,7 +103,7 @@ Función donde el server recibe el mensaje del cliente y lo altera en el reader
 
 Objeto cliente de QT 
 
-Definición en la línea 29 del archivo mainwindow.\+h.
+Definición en la línea 35 del archivo mainwindow.\+h.
 
 \mbox{\Hypertarget{classMainWindow_a655d4011f151bc1c009bfbc58e203092}\label{classMainWindow_a655d4011f151bc1c009bfbc58e203092}} 
 \index{MainWindow@{MainWindow}!m\_server@{m\_server}}
@@ -110,7 +113,17 @@ Definición en la línea 29 del archivo mainwindow.\+h.
 
 Objeto server de QT 
 
-Definición en la línea 25 del archivo mainwindow.\+h.
+Definición en la línea 30 del archivo mainwindow.\+h.
+
+\mbox{\Hypertarget{classMainWindow_a80196f2190796ed767e0a268817c1e9c}\label{classMainWindow_a80196f2190796ed767e0a268817c1e9c}} 
+\index{MainWindow@{MainWindow}!read@{read}}
+\index{read@{read}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classReader}{Reader}}$\ast$ Main\+Window\+::read = new \mbox{\hyperlink{classReader}{Reader}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+Lee e interpreta strings que vienen del editor 
+
+Definición en la línea 40 del archivo mainwindow.\+h.
 
 \mbox{\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5}} 
 \index{MainWindow@{MainWindow}!ui@{ui}}
@@ -120,7 +133,7 @@ Definición en la línea 25 del archivo mainwindow.\+h.
 
 Estructura de la ventana principal especificada en el archivo .ui 
 
-Definición en la línea 21 del archivo mainwindow.\+h.
+Definición en la línea 25 del archivo mainwindow.\+h.
 
 
 

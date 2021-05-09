@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['isvalid_29',['isValid',['../classTcpClient.html#a5e9ef69f7edf553fad1e10ce9f786223',1,'TcpClient']]]
+  ['deletezeroes_43',['deleteZeroes',['../classReader.html#a8dd432490824475812a8db92b163b2eb',1,'Reader']]]
 ];

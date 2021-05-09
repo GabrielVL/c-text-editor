@@ -70,6 +70,8 @@ $(function() {
 <div class="title">Referencia de la Clase MainWindow</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
 <div class="dynheader">
 Diagrama de herencias de MainWindow</div>
 <div class="dyncontent">
@@ -105,13 +107,13 @@ Atributos privados</h2></td></tr>
 <tr class="separator:a655d4011f151bc1c009bfbc58e203092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a924bc6567273b3cdc39a83490fca6a15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classTcpClient.html">TcpClient</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a924bc6567273b3cdc39a83490fca6a15">m_client1</a></td></tr>
 <tr class="separator:a924bc6567273b3cdc39a83490fca6a15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3bc5329b535757441c096a51cc11df3"><td class="memItemLeft" align="right" valign="top"><a id="af3bc5329b535757441c096a51cc11df3"></a>
-<a class="el" href="classReader.html">Reader</a>&#160;</td><td class="memItemRight" valign="bottom"><b>reader</b></td></tr>
-<tr class="separator:af3bc5329b535757441c096a51cc11df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80196f2190796ed767e0a268817c1e9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classReader.html">Reader</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a80196f2190796ed767e0a268817c1e9c">read</a> = new <a class="el" href="classReader.html">Reader</a>()</td></tr>
+<tr class="separator:a80196f2190796ed767e0a268817c1e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock">
-<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00014">14</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<div class="textblock"><p>Ventana principal del IDE que contiene el editor de texto, RAM Live View, Standard Output y el Application Log </p>
+
+<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00017">17</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="a996c5a2b6f77944776856f08ec30858d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&nbsp;</a></span>MainWindow()</h2>
@@ -262,7 +264,7 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 <p>Objeto cliente de QT </p>
 
-<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00029">29</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00035">35</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -287,7 +289,32 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 <p>Objeto server de QT </p>
 
-<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00025">25</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00030">30</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+</div>
+</div>
+<a id="a80196f2190796ed767e0a268817c1e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80196f2190796ed767e0a268817c1e9c">&#9670;&nbsp;</a></span>read</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classReader.html">Reader</a>* MainWindow::read = new <a class="el" href="classReader.html">Reader</a>()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Lee e interpreta strings que vienen del editor </p>
+
+<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00040">40</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>
@@ -312,7 +339,7 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 <p>Estructura de la ventana principal especificada en el archivo .ui </p>
 
-<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00021">21</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="mainwindow_8h_source.html#l00025">25</a> del archivo <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
 </div>
 </div>

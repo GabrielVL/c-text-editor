@@ -2,6 +2,10 @@
 \label{classTcpServer}\index{TcpServer@{TcpServer}}
 
 
+{\ttfamily \#include $<$Tcp\+Server.\+h$>$}
+
+
+
 Diagrama de herencias de Tcp\+Server
 % FIG 0
 
@@ -39,9 +43,9 @@ Q\+Set$<$ \mbox{\hyperlink{classTcpClient}{Tcp\+Client}} $\ast$ $>$ \mbox{\hyper
 
 
 \doxysubsection{Descripción detallada}
+Clase server que procesa los datos recibidos 
 
-
-Definición en la línea 11 del archivo Tcp\+Server.\+h.
+Definición en la línea 14 del archivo Tcp\+Server.\+h.
 
 
 
@@ -77,7 +81,7 @@ Confirma que el mensaje ha sido recibido
 \doxysubsubsection{\texorpdfstring{onMessageReceived}{onMessageReceived}}
 {\footnotesize\ttfamily void Tcp\+Server\+::on\+Message\+Received (\begin{DoxyParamCaption}\item[{Q\+String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
 
-Determina cómo reacciona el server al recibir un mensaje 
+Determina cómo reacciona el server al recibir un mensaje. Los clientes se conectan aquí. 
 \begin{DoxyParams}{Parámetros}
 {\em message} & Mensaje recibido \\
 \hline
@@ -124,7 +128,7 @@ booleano que confirma que está escuchando
 
 Conexiones establecidas con el cliente 
 
-Definición en la línea 21 del archivo Tcp\+Server.\+h.
+Definición en la línea 27 del archivo Tcp\+Server.\+h.
 
 \mbox{\Hypertarget{classTcpServer_a658097743b70732c62069ff9ab73a714}\label{classTcpServer_a658097743b70732c62069ff9ab73a714}} 
 \index{TcpServer@{TcpServer}!m\_server@{m\_server}}
@@ -134,7 +138,7 @@ Definición en la línea 21 del archivo Tcp\+Server.\+h.
 
 Objeto server de QT 
 
-Definición en la línea 17 del archivo Tcp\+Server.\+h.
+Definición en la línea 22 del archivo Tcp\+Server.\+h.
 
 
 
