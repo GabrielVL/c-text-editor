@@ -4,8 +4,8 @@
 
 #include <vector>
 #include <iostream>
-#include <sstream>
 #include "../Headers/Reader.h"
+
 Reader::Reader() {
     TextEditorLine.push_back("");
     TextEditorLine.push_back("");
@@ -63,7 +63,7 @@ void Reader::confirmType() {
             }
         }
     }
-    labelObject(isType);
+    cleanVector(isType);
 }
 
 void Reader::deleteZeroes(const std::string &data) {
@@ -76,11 +76,8 @@ void Reader::deleteZeroes(const std::string &data) {
     }
 }
 
-void Reader::labelObject(bool isType) {
+void Reader::cleanVector(bool isType) {
     if (isType) {
-        TextEditorLine[0] = "Tipo: " + TextEditorLine[0];
-        TextEditorLine[1] = "Etiqueta: " + TextEditorLine[1];
-        TextEditorLine[2] = "Valor: " + TextEditorLine[2];
         while (TextEditorLine.size() > 3) {
             TextEditorLine.pop_back();
         }

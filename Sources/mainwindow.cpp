@@ -58,9 +58,9 @@ void MainWindow::onServerMessageReceived(QString message)
     while (getline(allText, line)) {
         read->strSplitter(line);
         if (read->getStringVector()[0] != "Type Error") {
-            for (std::string printString: read->getStringVector()) {
-                ui->RamList->addItem(QString::fromStdString(printString));
-            }
+            ui->RamList->addItem(QString::fromStdString("Tipo: " + read->getStringVector()[0]));
+            ui->RamList->addItem(QString::fromStdString("Etiqueta: " + read->getStringVector()[1]));
+            ui->RamList->addItem(QString::fromStdString("Valor: " + read->getStringVector()[2]));
             ui->RamList->addItem(" ");
         } else {
             ui->StdoutList->addItem(QString::fromStdString(read->getStringVector()[0]));

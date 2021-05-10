@@ -6,8 +6,6 @@
 #define C_TEXT_EDITOR_READER_H
 
 
-#include <string>
-
 /**
  * Interpreta los objetos creados en el editor de texto línea por línea
  */
@@ -21,7 +19,7 @@ private:
     std::vector<std::string> TextEditorLine;
 
     /**
-     * Array con el nombre de los tipos de texto compatibles
+     * Array con el nombre de los vectorTipos de texto compatibles
      */
     const std::string typeArray[5] = {"char", "int", "long", "float", "double"};
 
@@ -34,8 +32,8 @@ private:
 public:
 
     /**
-     * Al construir el objeto, le añade 3 espacios vacíos al vector que lee línea por línea, ya que el código espera que
-     * el vector siempre contenga 3 strings o más.
+     * Al construir el objeto, le añade 3 espacios vacíos al vectorEtiquetas que lee línea por línea, ya que el código espera que
+     * el vectorEtiquetas siempre contenga 3 strings o más.
      */
     Reader();
 
@@ -46,13 +44,13 @@ public:
 
     /**
      * Divide la línea del editor de texto en 3 partes: primera palabra, cuerpo y última palabra Luego lo integra a un
-     * vector
+     * vectorEtiquetas
      * @param inStr Línea del editor de texto
      */
     void strSplitter(std::string inStr);
 
     /**
-     * Confirma si la primera palabra en el vector es un tipo válido y si el valor del último elemento del vector
+     * Confirma si la primera palabra en el vectorEtiquetas es un tipo válido y si el valor del último elemento del vectorEtiquetas
      * coincide con el tipo
      */
     void confirmType();
@@ -69,10 +67,10 @@ public:
      * RAM Live View, Si no es un objeto válido, muestra un error en el StdOut y el Applog
      * @param isType Verifica si la línea es un objeto válido o no
      */
-    void labelObject(bool isType);
+    void cleanVector(bool isType);
 
     /**
-     * retorna el vector con el contenido de la línea del editor de texto
+     * retorna el vectorEtiquetas con el contenido de la línea del editor de texto
      * @return Vector
      */
     const std::vector<std::string> &getStringVector() const;
