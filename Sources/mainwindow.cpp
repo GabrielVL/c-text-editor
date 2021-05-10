@@ -1,5 +1,6 @@
 #include <iostream>
 #include <sstream>
+
 #include "../Headers/mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -18,6 +19,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_startButton_clicked()
 {
+    // Conecta el server
     QString port = ui->PortLine->text();
     bool isConnected = false;
 
@@ -37,6 +39,12 @@ void MainWindow::on_startButton_clicked()
 
     connect(m_server,  &TcpServer::messageReceived, this, &MainWindow::onServerMessageReceived);
 
+    // Asigna la memoria
+    QString bytes = ui->RamLine->text();
+    ram = new memoryManager(bytes.toInt());
+    ui->ApplogList->addItem("Ram available: " + bytes + " bytes.");
+
+    // Permite el uso del editor de texto
     ui->runButton->setEnabled(isConnected);
     ui->startButton->setEnabled(false);
 }
@@ -54,17 +62,22 @@ void MainWindow::onServerMessageReceived(QString message)
     ui->StdoutList->clear();
     std::string stdMessage = message.toUtf8().constData();
     std::istringstream allText(stdMessage);
-    std::string line;
+    std::string line, tipo, etiqueta, valor;
     while (getline(allText, line)) {
         read->strSplitter(line);
         if (read->getStringVector()[0] != "Type Error") {
-            ui->RamList->addItem(QString::fromStdString("Tipo: " + read->getStringVector()[0]));
-            ui->RamList->addItem(QString::fromStdString("Etiqueta: " + read->getStringVector()[1]));
-            ui->RamList->addItem(QString::fromStdString("Valor: " + read->getStringVector()[2]));
-            ui->RamList->addItem(" ");
+            tipo = read->getStringVector()[0];
+            etiqueta = read->getStringVector()[1];
+            valor = read->getStringVector()[2];
+            ram->recibirInstrucciones(tipo, etiqueta, valor);
         } else {
             ui->StdoutList->addItem(QString::fromStdString(read->getStringVector()[0]));
             ui->ApplogList->addItem(QString::fromStdString(read->getStringVector()[0]));
+            ram->clearVector();
         }
+    }
+    if (read->getStringVector()[0] != "Type Error") {
+        ram->recibirInstrucciones(tipo, etiqueta, valor);
+        ram->imprimirEstado(ui);
     }
 }

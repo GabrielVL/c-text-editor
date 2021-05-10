@@ -2,14 +2,15 @@
 // Created by mauro on 4/22/21.
 //
 
-#include <iostream>
-#include <vector>
-#include <string>
+#include <QTextStream>
+#include <iomanip>
 
 #include "../Headers/memoryManager.h"
 
 
 //string* vectorTipos = malloc(100 * sizeof(string*));
+
+class MainWindow;
 
 memoryManager::memoryManager(int bytes) {
     memoria = (char*) malloc(bytes);
@@ -45,19 +46,21 @@ void memoryManager::insertarValor(std::string valor){
 
 /*Esta funcion se encarga de  insertar en la memoria RAM reservada  dependiendo si es un int o es un char*/
 void  memoryManager::insertarMemoria(std::string tipo){
-    std::string entero = "int";
-    std::string caracter = "char";
-    if(tipo == entero){
-        for(int i = indiceMemoria ; i < indiceMemoria+4 ; i++){
+    if(tipo == "char"){
+        memoria[indiceMemoria] = indice+'0';
+        indiceMemoria++;
+    } else if (tipo == "int" || tipo == "float"){
+        indiceMemoria += 4;
+        for(int i = indiceMemoria; i < indiceMemoria; i++){
             memoria[i] = indice+'0';
 
         }
-        indiceMemoria = indiceMemoria+4;
-    }
+    } else if (tipo == "long" || tipo == "double") {
+        indiceMemoria += 8;
+        for(int i = indiceMemoria; i < indiceMemoria; i++){
+            memoria[i] = indice+'0';
 
-    else if (tipo==caracter){
-        memoria[indiceMemoria] = indice+'0';
-        indiceMemoria++;
+        }
     }
 
 }
@@ -72,29 +75,49 @@ void memoryManager::recibirInstrucciones(std::string tipo, std::string nombre, s
 
 /*Esta funcion se encarga de obtener la posicicion de la memoria resevarda dependiento del tipo */
 
-int memoryManager::obtenerPosicion(int indice, std::string tipo){
-    std::string entero=("int");
-    std::string caracter=("char");
-    // cout<<"TIPO INGRESADO "<<tipo<<endl;
-    if(tipo==entero){
-        return indice+3;
+int memoryManager::obtenerPosicion(int ind, std::string tipo){
+    if (tipo == "int" || tipo == "float"){
+        ind += 3;
+    } else if (tipo == "long" || tipo == "double") {
+        ind += 7;
     }
-    else if (tipo==caracter){
-        return indice;
-    }
+    return ind;
 }
+
+QString pointerToQString(void *ptr)
+{
+    std::ostringstream oss;
+    oss << "0x" << std::uppercase << std::hex << uintptr_t(ptr);
+    return QString(oss.str().c_str());
+}
+
 /*Esta funcion es la encargada de imprimir el estado de la memoria */
-void memoryManager::imprimirEstado(){
-    std::string entero=("int");
-    std::string caracter=("char");
-    int indMemoria=0;
+void memoryManager::imprimirEstado(Ui::MainWindow *ui){
+    int indMemoria = 0;
+    QString tipo;
+    QString etiqueta;
+    QString valor;
+    indice -= 1;
     for (int i = 0; i < indice; i++ ){
-        std::string tipo = vectorTipos[i];
-        std::string nombre = vectorEtiquetas[i];
-        std::string valor = vectorValores[i];
-        indMemoria=obtenerPosicion(indMemoria,tipo);
-        std::cout<<"MEMORY POSITION: "<<(void*)&memoria[indMemoria] <<"...........TIPO: "<<tipo<< "...........NOMBRE: "<<nombre<<"...........VALOR: "<<valor<<std::endl;
+        tipo = QString::fromStdString(vectorTipos[i]);
+        etiqueta = QString::fromStdString(vectorEtiquetas[i]);
+        valor = QString::fromStdString(vectorValores[i]);
+        QString referencia = pointerToQString((void *) &memoria[indMemoria]);
+        indMemoria = obtenerPosicion(indMemoria,tipo.toUtf8().constData());
+        ui->RamList->addItem("Tipo: " + tipo);
+        ui->RamList->addItem("Etiqueta: " + etiqueta);
+        ui->RamList->addItem("Valor: " + valor);
+        ui->RamList->addItem("Posición en memoria: " + referencia);
+        ui->RamList->addItem(" ");
         indMemoria++;
     }
+    clearVector();
+}
+
+void memoryManager::clearVector() {
+    vectorTipos.clear();
+    vectorEtiquetas.clear();
+    vectorValores.clear();
+    indice = 0;
 }
 

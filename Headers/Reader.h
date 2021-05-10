@@ -19,7 +19,7 @@ private:
     std::vector<std::string> TextEditorLine;
 
     /**
-     * Array con el nombre de los vectorTipos de texto compatibles
+     * Array con el nombre de los tipos de texto compatibles
      */
     const std::string typeArray[5] = {"char", "int", "long", "float", "double"};
 

@@ -132,7 +132,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="RamLine"/>
+      <widget class="QLineEdit" name="RamLine">
+       <property name="text">
+        <string>100</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="startButton">

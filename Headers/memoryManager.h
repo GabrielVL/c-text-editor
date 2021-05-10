@@ -5,6 +5,8 @@
 #ifndef C_TEXT_EDITOR_MEMORYMANAGER_CPP_H
 #define C_TEXT_EDITOR_MEMORYMANAGER_CPP_H
 
+#include "ui_mainwindow.h"
+
 class memoryManager {
 
 private:
@@ -35,9 +37,11 @@ public:
 
     void recibirInstrucciones(std::string tipo, std::string nombre, std::string valor);
 
-    int obtenerPosicion(int indice, std::string tipo);
+    int obtenerPosicion(int ind, std::string tipo);
 
-    void imprimirEstado();
+    void imprimirEstado(Ui::MainWindow *ui);
+
+    void clearVector();
 };
 
 #endif //C_TEXT_EDITOR_MEMORYMANAGER_CPP_H

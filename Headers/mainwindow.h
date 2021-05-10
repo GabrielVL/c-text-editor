@@ -6,6 +6,7 @@
 #include "TcpServer.h"
 #include "TcpClient.h"
 #include "Reader.h"
+#include "memoryManager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -38,6 +39,8 @@ private:
      * Lee e interpreta strings que vienen del editor
      */
     Reader *read = new Reader();
+
+    memoryManager *ram;
 
 public:
 
