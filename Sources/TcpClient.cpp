@@ -16,6 +16,8 @@ TcpClient::TcpClient(QObject *parent) :
     connect(m_socket, &QTcpSocket::disconnected, this, &TcpClient::onDisconnected);
 }
 
+TcpClient::~TcpClient() = default;
+
 TcpClient::TcpClient(QObject *parent, QTcpSocket *socket) :
         QObject(parent),
         m_socket(socket),

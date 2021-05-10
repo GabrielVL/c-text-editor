@@ -1,0 +1,155 @@
+\hypertarget{classTcpServer}{}\doxysection{Referencia de la Clase Tcp\+Server}
+\label{classTcpServer}\index{TcpServer@{TcpServer}}
+
+
+{\ttfamily \#include $<$Tcp\+Server.\+h$>$}
+
+
+
+Diagrama de herencias de Tcp\+Server
+% FIG 0
+
+
+Diagrama de colaboración para Tcp\+Server\+:
+% FIG 1
+\doxysubsection*{Señales}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTcpServer_a079e2d0552871e7c51ce4c2aef590359}{message\+Received}} (const Q\+String \&message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTcpServer_ad706c7cb8a8eb3784b02a6f1b18a18c7}{Tcp\+Server}} (Q\+Object $\ast$parent=nullptr)
+\item 
+virtual \mbox{\hyperlink{classTcpServer_ad1d37e10072aa3a80bafc6bf2f52c896}{$\sim$\+Tcp\+Server}} ()
+\item 
+bool \mbox{\hyperlink{classTcpServer_a35645e2f577e2b662ce1881ec878e362}{start\+Listening}} (const quint16 \&port)
+\item 
+void \mbox{\hyperlink{classTcpServer_a0abd4aa9dfcbeafa670a9c06081ebb6a}{send\+Message}} (const Q\+String \&message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Slots privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classTcpServer_aadc27aa36be166570ec15668bb2debb2}{on\+New\+Connection}} ()
+\item 
+void \mbox{\hyperlink{classTcpServer_aa86bb4e0315eed12284515decc9e7243}{on\+Message\+Received}} (Q\+String message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Tcp\+Server $\ast$ \mbox{\hyperlink{classTcpServer_a658097743b70732c62069ff9ab73a714}{m\+\_\+server}} = nullptr
+\item 
+Q\+Set$<$ \mbox{\hyperlink{classTcpClient}{Tcp\+Client}} $\ast$ $>$ \mbox{\hyperlink{classTcpServer_a46fd77760112c760ba73671194598f26}{m\+\_\+connections}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase server que procesa los datos recibidos 
+
+Definición en la línea 14 del archivo Tcp\+Server.\+h.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classTcpServer_ad706c7cb8a8eb3784b02a6f1b18a18c7}\label{classTcpServer_ad706c7cb8a8eb3784b02a6f1b18a18c7}} 
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\index{TcpServer@{TcpServer}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{TcpServer()}{TcpServer()}}
+{\footnotesize\ttfamily Tcp\+Server\+::\+Tcp\+Server (\begin{DoxyParamCaption}\item[{Q\+Object $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Constructor del server 
+\begin{DoxyParams}{Parámetros}
+{\em parent} & Hereda de Q\+Object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTcpServer_ad1d37e10072aa3a80bafc6bf2f52c896}\label{classTcpServer_ad1d37e10072aa3a80bafc6bf2f52c896}} 
+\index{TcpServer@{TcpServer}!````~TcpServer@{$\sim$TcpServer}}
+\index{````~TcpServer@{$\sim$TcpServer}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{$\sim$TcpServer()}{~TcpServer()}}
+{\footnotesize\ttfamily virtual Tcp\+Server\+::$\sim$\+Tcp\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor del server 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classTcpServer_a079e2d0552871e7c51ce4c2aef590359}\label{classTcpServer_a079e2d0552871e7c51ce4c2aef590359}} 
+\index{TcpServer@{TcpServer}!messageReceived@{messageReceived}}
+\index{messageReceived@{messageReceived}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{messageReceived}{messageReceived}}
+{\footnotesize\ttfamily void Tcp\+Server\+::message\+Received (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Confirma que el mensaje ha sido recibido 
+\begin{DoxyParams}{Parámetros}
+{\em message} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTcpServer_aa86bb4e0315eed12284515decc9e7243}\label{classTcpServer_aa86bb4e0315eed12284515decc9e7243}} 
+\index{TcpServer@{TcpServer}!onMessageReceived@{onMessageReceived}}
+\index{onMessageReceived@{onMessageReceived}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{onMessageReceived}{onMessageReceived}}
+{\footnotesize\ttfamily void Tcp\+Server\+::on\+Message\+Received (\begin{DoxyParamCaption}\item[{Q\+String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Determina cómo reacciona el server al recibir un mensaje. Los clientes se conectan aquí. 
+\begin{DoxyParams}{Parámetros}
+{\em message} & Mensaje recibido \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTcpServer_aadc27aa36be166570ec15668bb2debb2}\label{classTcpServer_aadc27aa36be166570ec15668bb2debb2}} 
+\index{TcpServer@{TcpServer}!onNewConnection@{onNewConnection}}
+\index{onNewConnection@{onNewConnection}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{onNewConnection}{onNewConnection}}
+{\footnotesize\ttfamily void Tcp\+Server\+::on\+New\+Connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Acción que realiza al conectarse a un cliente \mbox{\Hypertarget{classTcpServer_a0abd4aa9dfcbeafa670a9c06081ebb6a}\label{classTcpServer_a0abd4aa9dfcbeafa670a9c06081ebb6a}} 
+\index{TcpServer@{TcpServer}!sendMessage@{sendMessage}}
+\index{sendMessage@{sendMessage}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{sendMessage()}{sendMessage()}}
+{\footnotesize\ttfamily void Tcp\+Server\+::send\+Message (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{message }\end{DoxyParamCaption})}
+
+Sends a message to the client connected 
+\begin{DoxyParams}{Parámetros}
+{\em message} & Message to send \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classTcpServer_a35645e2f577e2b662ce1881ec878e362}\label{classTcpServer_a35645e2f577e2b662ce1881ec878e362}} 
+\index{TcpServer@{TcpServer}!startListening@{startListening}}
+\index{startListening@{startListening}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{startListening()}{startListening()}}
+{\footnotesize\ttfamily bool Tcp\+Server\+::start\+Listening (\begin{DoxyParamCaption}\item[{const quint16 \&}]{port }\end{DoxyParamCaption})}
+
+Empieza a escuchar en el puerto que se asigna 
+\begin{DoxyParams}{Parámetros}
+{\em port} & puerto a escuchar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+booleano que confirma que está escuchando 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classTcpServer_a46fd77760112c760ba73671194598f26}\label{classTcpServer_a46fd77760112c760ba73671194598f26}} 
+\index{TcpServer@{TcpServer}!m\_connections@{m\_connections}}
+\index{m\_connections@{m\_connections}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{m\_connections}{m\_connections}}
+{\footnotesize\ttfamily Q\+Set$<$\mbox{\hyperlink{classTcpClient}{Tcp\+Client}}$\ast$$>$ Tcp\+Server\+::m\+\_\+connections\hspace{0.3cm}{\ttfamily [private]}}
+
+Conexiones establecidas con el cliente 
+
+Definición en la línea 27 del archivo Tcp\+Server.\+h.
+
+\mbox{\Hypertarget{classTcpServer_a658097743b70732c62069ff9ab73a714}\label{classTcpServer_a658097743b70732c62069ff9ab73a714}} 
+\index{TcpServer@{TcpServer}!m\_server@{m\_server}}
+\index{m\_server@{m\_server}!TcpServer@{TcpServer}}
+\doxysubsubsection{\texorpdfstring{m\_server}{m\_server}}
+{\footnotesize\ttfamily Q\+Tcp\+Server$\ast$ Tcp\+Server\+::m\+\_\+server = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+Objeto server de QT 
+
+Definición en la línea 22 del archivo Tcp\+Server.\+h.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+Tcp\+Server.\+h\end{DoxyCompactItemize}

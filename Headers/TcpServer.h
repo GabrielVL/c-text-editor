@@ -35,6 +35,11 @@ public:
     TcpServer(QObject *parent = nullptr);
 
     /**
+     * Destructor del server
+     */
+    virtual ~TcpServer();
+
+    /**
      * Empieza a escuchar en el puerto que se asigna
      * @param port puerto a escuchar
      * @return booleano que confirma que está escuchando

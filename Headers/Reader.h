@@ -23,12 +23,6 @@ private:
      */
     const std::string typeArray[5] = {"char", "int", "long", "float", "double"};
 
-//    std::string type;
-//    std::string name;
-//    std::string value;
-//    int scope;
-//    int references;
-
 public:
 
     /**

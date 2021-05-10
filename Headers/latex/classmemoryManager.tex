@@ -1,0 +1,211 @@
+\hypertarget{classmemoryManager}{}\doxysection{Referencia de la Clase memory\+Manager}
+\label{classmemoryManager}\index{memoryManager@{memoryManager}}
+
+
+{\ttfamily \#include $<$memory\+Manager.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmemoryManager_ae4e61ab5b05f2948f2567700f26885d0}{memory\+Manager}} (int bytes)
+\item 
+virtual \mbox{\hyperlink{classmemoryManager_af87bc667a8b9c3861b953c530ef63c30}{$\sim$memory\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classmemoryManager_a34d608ac6e0727d11e1d2c8b35e231d0}{insertar\+Memoria}} (std\+::string tipo)
+\item 
+void \mbox{\hyperlink{classmemoryManager_a40bde44eef38bf07b2a3f41e2a7be80c}{recibir\+Instrucciones}} (std\+::string tipo, std\+::string etiqueta, std\+::string valor)
+\item 
+int \mbox{\hyperlink{classmemoryManager_a70546561c368bd30afe7bffcb1240535}{obtener\+Posicion}} (int ind, std\+::string tipo)
+\item 
+void \mbox{\hyperlink{classmemoryManager_a833b8113c3b140a115a683ffe115eeb8}{imprimir\+Estado}} (Ui\+::\+Main\+Window $\ast$ui)
+\item 
+Q\+String \mbox{\hyperlink{classmemoryManager_a3811ff5408f405895da6faa9dd23f287}{pointer\+To\+Q\+String}} (void $\ast$ptr)
+\item 
+void \mbox{\hyperlink{classmemoryManager_a2c32c57a4f7d922324f3227f1a95f084}{clear\+Vector}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classmemoryManager_a065141321cb166bcbfb6b80e54f50b7d}{memoria}}
+\item 
+int \mbox{\hyperlink{classmemoryManager_ad684831ce6d255687919806f8a2bcbaf}{indice}}
+\item 
+int \mbox{\hyperlink{classmemoryManager_ada913d9209d6484d8b14fb6ec8504fad}{indice\+Memoria}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmemoryManager_a2ecfe2147f03c7569cee6115b03e7f00}{vector\+Tipos}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmemoryManager_a2e4012abeaf21138caee2c5f948c1229}{vector\+Etiquetas}}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classmemoryManager_ade7ba19362c3a6048d45a38f6ec3f462}{vector\+Valores}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Administra una cantidad de memoria determinada al I\+DE 
+
+Definición en la línea 13 del archivo memory\+Manager.\+h.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classmemoryManager_ae4e61ab5b05f2948f2567700f26885d0}\label{classmemoryManager_ae4e61ab5b05f2948f2567700f26885d0}} 
+\index{memoryManager@{memoryManager}!memoryManager@{memoryManager}}
+\index{memoryManager@{memoryManager}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{memoryManager()}{memoryManager()}}
+{\footnotesize\ttfamily memory\+Manager\+::memory\+Manager (\begin{DoxyParamCaption}\item[{int}]{bytes }\end{DoxyParamCaption})}
+
+Crea el objeto que administra la memoria 
+\begin{DoxyParams}{Parámetros}
+{\em bytes} & Memoria a administrar en bytes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmemoryManager_af87bc667a8b9c3861b953c530ef63c30}\label{classmemoryManager_af87bc667a8b9c3861b953c530ef63c30}} 
+\index{memoryManager@{memoryManager}!````~memoryManager@{$\sim$memoryManager}}
+\index{````~memoryManager@{$\sim$memoryManager}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$memoryManager()}{~memoryManager()}}
+{\footnotesize\ttfamily virtual memory\+Manager\+::$\sim$memory\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor del administrador de memoria 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classmemoryManager_a2c32c57a4f7d922324f3227f1a95f084}\label{classmemoryManager_a2c32c57a4f7d922324f3227f1a95f084}} 
+\index{memoryManager@{memoryManager}!clearVector@{clearVector}}
+\index{clearVector@{clearVector}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{clearVector()}{clearVector()}}
+{\footnotesize\ttfamily void memory\+Manager\+::clear\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Limpia el vector y el índice del administrador de memoria \mbox{\Hypertarget{classmemoryManager_a833b8113c3b140a115a683ffe115eeb8}\label{classmemoryManager_a833b8113c3b140a115a683ffe115eeb8}} 
+\index{memoryManager@{memoryManager}!imprimirEstado@{imprimirEstado}}
+\index{imprimirEstado@{imprimirEstado}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{imprimirEstado()}{imprimirEstado()}}
+{\footnotesize\ttfamily void memory\+Manager\+::imprimir\+Estado (\begin{DoxyParamCaption}\item[{Ui\+::\+Main\+Window $\ast$}]{ui }\end{DoxyParamCaption})}
+
+Muestra el estado de la memoria en la sección de R\+AM del I\+DE 
+\begin{DoxyParams}{Parámetros}
+{\em ui} & Ventana principal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmemoryManager_a34d608ac6e0727d11e1d2c8b35e231d0}\label{classmemoryManager_a34d608ac6e0727d11e1d2c8b35e231d0}} 
+\index{memoryManager@{memoryManager}!insertarMemoria@{insertarMemoria}}
+\index{insertarMemoria@{insertarMemoria}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{insertarMemoria()}{insertarMemoria()}}
+{\footnotesize\ttfamily void memory\+Manager\+::insertar\+Memoria (\begin{DoxyParamCaption}\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+Se encarga de insertar en la memoria R\+AM reservada dependiendo del tipo de dato 
+\begin{DoxyParams}{Parámetros}
+{\em tipo} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classmemoryManager_a70546561c368bd30afe7bffcb1240535}\label{classmemoryManager_a70546561c368bd30afe7bffcb1240535}} 
+\index{memoryManager@{memoryManager}!obtenerPosicion@{obtenerPosicion}}
+\index{obtenerPosicion@{obtenerPosicion}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{obtenerPosicion()}{obtenerPosicion()}}
+{\footnotesize\ttfamily int memory\+Manager\+::obtener\+Posicion (\begin{DoxyParamCaption}\item[{int}]{ind,  }\item[{std\+::string}]{tipo }\end{DoxyParamCaption})}
+
+Esta funcion se encarga de obtener la posicicion de la memoria resevarda dependiento del tipo 
+\begin{DoxyParams}{Parámetros}
+{\em ind} & posición actual recorrida \\
+\hline
+{\em tipo} & Utilizado para recorrer el array según el tamaño que necesita el tipo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+posición nueva 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmemoryManager_a3811ff5408f405895da6faa9dd23f287}\label{classmemoryManager_a3811ff5408f405895da6faa9dd23f287}} 
+\index{memoryManager@{memoryManager}!pointerToQString@{pointerToQString}}
+\index{pointerToQString@{pointerToQString}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{pointerToQString()}{pointerToQString()}}
+{\footnotesize\ttfamily Q\+String memory\+Manager\+::pointer\+To\+Q\+String (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})}
+
+Encargada de mostrar punteros en un string 
+\begin{DoxyParams}{Parámetros}
+{\em ptr} & Puntero a mostrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Q\+String para mostrar el puntero en pantalla 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classmemoryManager_a40bde44eef38bf07b2a3f41e2a7be80c}\label{classmemoryManager_a40bde44eef38bf07b2a3f41e2a7be80c}} 
+\index{memoryManager@{memoryManager}!recibirInstrucciones@{recibirInstrucciones}}
+\index{recibirInstrucciones@{recibirInstrucciones}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{recibirInstrucciones()}{recibirInstrucciones()}}
+{\footnotesize\ttfamily void memory\+Manager\+::recibir\+Instrucciones (\begin{DoxyParamCaption}\item[{std\+::string}]{tipo,  }\item[{std\+::string}]{etiqueta,  }\item[{std\+::string}]{valor }\end{DoxyParamCaption})}
+
+Esta funcion se encarga de manejar la logica de un tipo un etiqueta y un valor 
+\begin{DoxyParams}{Parámetros}
+{\em tipo} & Tipo de dato de una variable \\
+\hline
+{\em etiqueta} & Nombre etiquetado a la variable \\
+\hline
+{\em valor} & Valor que guarda la variable \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classmemoryManager_ad684831ce6d255687919806f8a2bcbaf}\label{classmemoryManager_ad684831ce6d255687919806f8a2bcbaf}} 
+\index{memoryManager@{memoryManager}!indice@{indice}}
+\index{indice@{indice}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{indice}{indice}}
+{\footnotesize\ttfamily int memory\+Manager\+::indice\hspace{0.3cm}{\ttfamily [private]}}
+
+Ayuda a mantener las referencias de las posicones del array 
+
+Definición en la línea 26 del archivo memory\+Manager.\+h.
+
+\mbox{\Hypertarget{classmemoryManager_ada913d9209d6484d8b14fb6ec8504fad}\label{classmemoryManager_ada913d9209d6484d8b14fb6ec8504fad}} 
+\index{memoryManager@{memoryManager}!indiceMemoria@{indiceMemoria}}
+\index{indiceMemoria@{indiceMemoria}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{indiceMemoria}{indiceMemoria}}
+{\footnotesize\ttfamily int memory\+Manager\+::indice\+Memoria\hspace{0.3cm}{\ttfamily [private]}}
+
+Ayuda a mantener las referencias de las posicones del array 
+
+Definición en la línea 31 del archivo memory\+Manager.\+h.
+
+\mbox{\Hypertarget{classmemoryManager_a065141321cb166bcbfb6b80e54f50b7d}\label{classmemoryManager_a065141321cb166bcbfb6b80e54f50b7d}} 
+\index{memoryManager@{memoryManager}!memoria@{memoria}}
+\index{memoria@{memoria}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{memoria}{memoria}}
+{\footnotesize\ttfamily char$\ast$ memory\+Manager\+::memoria\hspace{0.3cm}{\ttfamily [private]}}
+
+Array que almacena las posiciones de memoria de la R\+AM 
+
+Definición en la línea 21 del archivo memory\+Manager.\+h.
+
+\mbox{\Hypertarget{classmemoryManager_a2e4012abeaf21138caee2c5f948c1229}\label{classmemoryManager_a2e4012abeaf21138caee2c5f948c1229}} 
+\index{memoryManager@{memoryManager}!vectorEtiquetas@{vectorEtiquetas}}
+\index{vectorEtiquetas@{vectorEtiquetas}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{vectorEtiquetas}{vectorEtiquetas}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ memory\+Manager\+::vector\+Etiquetas\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector que almacena las etiquetas de las variables almacenadas 
+
+Definición en la línea 41 del archivo memory\+Manager.\+h.
+
+\mbox{\Hypertarget{classmemoryManager_a2ecfe2147f03c7569cee6115b03e7f00}\label{classmemoryManager_a2ecfe2147f03c7569cee6115b03e7f00}} 
+\index{memoryManager@{memoryManager}!vectorTipos@{vectorTipos}}
+\index{vectorTipos@{vectorTipos}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{vectorTipos}{vectorTipos}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ memory\+Manager\+::vector\+Tipos\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector que almacena los tipos de los datos almacenados 
+
+Definición en la línea 36 del archivo memory\+Manager.\+h.
+
+\mbox{\Hypertarget{classmemoryManager_ade7ba19362c3a6048d45a38f6ec3f462}\label{classmemoryManager_ade7ba19362c3a6048d45a38f6ec3f462}} 
+\index{memoryManager@{memoryManager}!vectorValores@{vectorValores}}
+\index{vectorValores@{vectorValores}!memoryManager@{memoryManager}}
+\doxysubsubsection{\texorpdfstring{vectorValores}{vectorValores}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ memory\+Manager\+::vector\+Valores\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector que almacena los valores de las variables almacenadas 
+
+Definición en la línea 46 del archivo memory\+Manager.\+h.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+memory\+Manager.\+h\end{DoxyCompactItemize}

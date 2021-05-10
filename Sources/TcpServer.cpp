@@ -9,6 +9,8 @@ TcpServer::TcpServer(QObject *parent) :
 {
 }
 
+TcpServer::~TcpServer() = default;
+
 void TcpServer::onNewConnection()
 {
     TcpClient *connection = new TcpClient(this, m_server->nextPendingConnection());

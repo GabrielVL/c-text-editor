@@ -1,0 +1,131 @@
+\hypertarget{classReader}{}\doxysection{Referencia de la Clase Reader}
+\label{classReader}\index{Reader@{Reader}}
+
+
+{\ttfamily \#include $<$Reader.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classReader_adcda31b507720ab44044d7a21686fba2}{Reader}} ()
+\item 
+virtual \mbox{\hyperlink{classReader_a357153a7085f8b606de954a80411e27a}{$\sim$\+Reader}} ()
+\item 
+void \mbox{\hyperlink{classReader_ae8256bfb11fe0a67aa6a05cc6ab64b4b}{str\+Splitter}} (std\+::string in\+Str)
+\item 
+void \mbox{\hyperlink{classReader_a15fc68fe6faf1ea77bdc08c32bc46b49}{confirm\+Type}} ()
+\item 
+void \mbox{\hyperlink{classReader_a8dd432490824475812a8db92b163b2eb}{delete\+Zeroes}} (const std\+::string \&data)
+\item 
+void \mbox{\hyperlink{classReader_a3f66588c8349d989c36776df61987061}{clean\+Vector}} (bool is\+Type)
+\item 
+const std\+::vector$<$ std\+::string $>$ \& \mbox{\hyperlink{classReader_a50411ca4a976463602a3785866eb48d1}{get\+String\+Vector}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classReader_a1b2b94822a9317a69fe0579a63138fea}{Text\+Editor\+Line}}
+\item 
+const std\+::string \mbox{\hyperlink{classReader_ae7823a0ee977dbe627548d4be457a33b}{type\+Array}} \mbox{[}5\mbox{]} = \{\char`\"{}char\char`\"{}, \char`\"{}int\char`\"{}, \char`\"{}long\char`\"{}, \char`\"{}float\char`\"{}, \char`\"{}double\char`\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Interpreta los objetos creados en el editor de texto línea por línea 
+
+Definición en la línea 12 del archivo Reader.\+h.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classReader_adcda31b507720ab44044d7a21686fba2}\label{classReader_adcda31b507720ab44044d7a21686fba2}} 
+\index{Reader@{Reader}!Reader@{Reader}}
+\index{Reader@{Reader}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{Reader()}{Reader()}}
+{\footnotesize\ttfamily Reader\+::\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Al construir el objeto, le añade 3 espacios vacíos al vector\+Etiquetas que lee línea por línea, ya que el código espera que el vector\+Etiquetas siempre contenga 3 strings o más. \mbox{\Hypertarget{classReader_a357153a7085f8b606de954a80411e27a}\label{classReader_a357153a7085f8b606de954a80411e27a}} 
+\index{Reader@{Reader}!````~Reader@{$\sim$Reader}}
+\index{````~Reader@{$\sim$Reader}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Reader()}{~Reader()}}
+{\footnotesize\ttfamily virtual Reader\+::$\sim$\+Reader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Elimina el \mbox{\hyperlink{classReader}{Reader}} 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classReader_a3f66588c8349d989c36776df61987061}\label{classReader_a3f66588c8349d989c36776df61987061}} 
+\index{Reader@{Reader}!cleanVector@{cleanVector}}
+\index{cleanVector@{cleanVector}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{cleanVector()}{cleanVector()}}
+{\footnotesize\ttfamily void Reader\+::clean\+Vector (\begin{DoxyParamCaption}\item[{bool}]{is\+Type }\end{DoxyParamCaption})}
+
+Etiqueta el tipo de dato, su nombre y el valor de cada objeto que se ingrese en cada línea para mostrarlo en el R\+AM Live View, Si no es un objeto válido, muestra un error en el Std\+Out y el Applog 
+\begin{DoxyParams}{Parámetros}
+{\em is\+Type} & Verifica si la línea es un objeto válido o no \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReader_a15fc68fe6faf1ea77bdc08c32bc46b49}\label{classReader_a15fc68fe6faf1ea77bdc08c32bc46b49}} 
+\index{Reader@{Reader}!confirmType@{confirmType}}
+\index{confirmType@{confirmType}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{confirmType()}{confirmType()}}
+{\footnotesize\ttfamily void Reader\+::confirm\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Confirma si la primera palabra en el vector\+Etiquetas es un tipo válido y si el valor del último elemento del vector\+Etiquetas coincide con el tipo \mbox{\Hypertarget{classReader_a8dd432490824475812a8db92b163b2eb}\label{classReader_a8dd432490824475812a8db92b163b2eb}} 
+\index{Reader@{Reader}!deleteZeroes@{deleteZeroes}}
+\index{deleteZeroes@{deleteZeroes}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{deleteZeroes()}{deleteZeroes()}}
+{\footnotesize\ttfamily void Reader\+::delete\+Zeroes (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+Si el objeto es un número, elimina los ceros a la izquierda y define los elementos que se pueden ingresar después de la coma en un float o un double. 
+\begin{DoxyParams}{Parámetros}
+{\em data} & Valor del objeto (número) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classReader_a50411ca4a976463602a3785866eb48d1}\label{classReader_a50411ca4a976463602a3785866eb48d1}} 
+\index{Reader@{Reader}!getStringVector@{getStringVector}}
+\index{getStringVector@{getStringVector}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{getStringVector()}{getStringVector()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::string$>$\& Reader\+::get\+String\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+retorna el vector\+Etiquetas con el contenido de la línea del editor de texto \begin{DoxyReturn}{Devuelve}
+Vector 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classReader_ae8256bfb11fe0a67aa6a05cc6ab64b4b}\label{classReader_ae8256bfb11fe0a67aa6a05cc6ab64b4b}} 
+\index{Reader@{Reader}!strSplitter@{strSplitter}}
+\index{strSplitter@{strSplitter}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{strSplitter()}{strSplitter()}}
+{\footnotesize\ttfamily void Reader\+::str\+Splitter (\begin{DoxyParamCaption}\item[{std\+::string}]{in\+Str }\end{DoxyParamCaption})}
+
+Divide la línea del editor de texto en 3 partes\+: primera palabra, cuerpo y última palabra Luego lo integra a un vector\+Etiquetas 
+\begin{DoxyParams}{Parámetros}
+{\em in\+Str} & Línea del editor de texto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classReader_a1b2b94822a9317a69fe0579a63138fea}\label{classReader_a1b2b94822a9317a69fe0579a63138fea}} 
+\index{Reader@{Reader}!TextEditorLine@{TextEditorLine}}
+\index{TextEditorLine@{TextEditorLine}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{TextEditorLine}{TextEditorLine}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Reader\+::\+Text\+Editor\+Line\hspace{0.3cm}{\ttfamily [private]}}
+
+Línea escaneada del editor de texto 
+
+Definición en la línea 19 del archivo Reader.\+h.
+
+\mbox{\Hypertarget{classReader_ae7823a0ee977dbe627548d4be457a33b}\label{classReader_ae7823a0ee977dbe627548d4be457a33b}} 
+\index{Reader@{Reader}!typeArray@{typeArray}}
+\index{typeArray@{typeArray}!Reader@{Reader}}
+\doxysubsubsection{\texorpdfstring{typeArray}{typeArray}}
+{\footnotesize\ttfamily const std\+::string Reader\+::type\+Array\mbox{[}5\mbox{]} = \{\char`\"{}char\char`\"{}, \char`\"{}int\char`\"{}, \char`\"{}long\char`\"{}, \char`\"{}float\char`\"{}, \char`\"{}double\char`\"{}\}\hspace{0.3cm}{\ttfamily [private]}}
+
+Array con el nombre de los tipos de texto compatibles 
+
+Definición en la línea 24 del archivo Reader.\+h.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+Reader.\+h\end{DoxyCompactItemize}

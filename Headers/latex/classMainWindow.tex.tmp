@@ -1,0 +1,145 @@
+\hypertarget{classMainWindow}{}\doxysection{Referencia de la Clase Main\+Window}
+\label{classMainWindow}\index{MainWindow@{MainWindow}}
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+
+
+Diagrama de herencias de Main\+Window
+% FIG 0
+
+
+Diagrama de colaboración para Main\+Window\+:
+% FIG 1
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Slots privados}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_abcc096120205197b50fa55cb603acb95}{on\+\_\+start\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classMainWindow_a13ed21ca06638508f48e2a8ce6f98a8c}{on\+\_\+run\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{classMainWindow_a93c207e060e157d2d4a018678baef55d}{on\+Server\+Message\+Received}} (Q\+String message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}}
+\item 
+\mbox{\hyperlink{classTcpServer}{Tcp\+Server}} $\ast$ \mbox{\hyperlink{classMainWindow_a655d4011f151bc1c009bfbc58e203092}{m\+\_\+server}}
+\item 
+\mbox{\hyperlink{classTcpClient}{Tcp\+Client}} $\ast$ \mbox{\hyperlink{classMainWindow_a924bc6567273b3cdc39a83490fca6a15}{m\+\_\+client1}}
+\item 
+\mbox{\hyperlink{classReader}{Reader}} $\ast$ \mbox{\hyperlink{classMainWindow_a80196f2190796ed767e0a268817c1e9c}{read}} = new \mbox{\hyperlink{classReader}{Reader}}()
+\item 
+\mbox{\Hypertarget{classMainWindow_aea2db34748743d78931b12d05ccb3264}\label{classMainWindow_aea2db34748743d78931b12d05ccb3264}} 
+\mbox{\hyperlink{classmemoryManager}{memory\+Manager}} $\ast$ {\bfseries ram}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Ventana principal del I\+DE que contiene el editor de texto, R\+AM Live View, Standard Output y el Application Log 
+
+Definición en la línea 18 del archivo mainwindow.\+h.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Crea la interfaz de la ventana principal del I\+DE 
+\begin{DoxyParams}{Parámetros}
+{\em parent} & Widget de QT \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
+\index{````~MainWindow@{$\sim$MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainWindow()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Elimina la ventana 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classMainWindow_a13ed21ca06638508f48e2a8ce6f98a8c}\label{classMainWindow_a13ed21ca06638508f48e2a8ce6f98a8c}} 
+\index{MainWindow@{MainWindow}!on\_runButton\_clicked@{on\_runButton\_clicked}}
+\index{on\_runButton\_clicked@{on\_runButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_runButton\_clicked}{on\_runButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+run\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Función asignada al botón \char`\"{}\+Run\char`\"{} que envía el código al editor de texto para compilarla en el server \mbox{\Hypertarget{classMainWindow_abcc096120205197b50fa55cb603acb95}\label{classMainWindow_abcc096120205197b50fa55cb603acb95}} 
+\index{MainWindow@{MainWindow}!on\_startButton\_clicked@{on\_startButton\_clicked}}
+\index{on\_startButton\_clicked@{on\_startButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_startButton\_clicked}{on\_startButton\_clicked}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+\_\+start\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Función asignara al botón \char`\"{}\+O\+K\char`\"{} que define el puerto donde se conecta el I\+DE y la memoria a utilizar en el editor. \mbox{\Hypertarget{classMainWindow_a93c207e060e157d2d4a018678baef55d}\label{classMainWindow_a93c207e060e157d2d4a018678baef55d}} 
+\index{MainWindow@{MainWindow}!onServerMessageReceived@{onServerMessageReceived}}
+\index{onServerMessageReceived@{onServerMessageReceived}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onServerMessageReceived}{onServerMessageReceived}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Server\+Message\+Received (\begin{DoxyParamCaption}\item[{Q\+String}]{message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Función donde el server recibe el mensaje del cliente y lo altera en el reader 
+\begin{DoxyParams}{Parámetros}
+{\em message} & Mensaje a modificar \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classMainWindow_a924bc6567273b3cdc39a83490fca6a15}\label{classMainWindow_a924bc6567273b3cdc39a83490fca6a15}} 
+\index{MainWindow@{MainWindow}!m\_client1@{m\_client1}}
+\index{m\_client1@{m\_client1}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_client1}{m\_client1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTcpClient}{Tcp\+Client}}$\ast$ Main\+Window\+::m\+\_\+client1\hspace{0.3cm}{\ttfamily [private]}}
+
+Objeto cliente de QT 
+
+Definición en la línea 36 del archivo mainwindow.\+h.
+
+\mbox{\Hypertarget{classMainWindow_a655d4011f151bc1c009bfbc58e203092}\label{classMainWindow_a655d4011f151bc1c009bfbc58e203092}} 
+\index{MainWindow@{MainWindow}!m\_server@{m\_server}}
+\index{m\_server@{m\_server}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{m\_server}{m\_server}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTcpServer}{Tcp\+Server}}$\ast$ Main\+Window\+::m\+\_\+server\hspace{0.3cm}{\ttfamily [private]}}
+
+Objeto server de QT 
+
+Definición en la línea 31 del archivo mainwindow.\+h.
+
+\mbox{\Hypertarget{classMainWindow_a80196f2190796ed767e0a268817c1e9c}\label{classMainWindow_a80196f2190796ed767e0a268817c1e9c}} 
+\index{MainWindow@{MainWindow}!read@{read}}
+\index{read@{read}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{read}{read}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classReader}{Reader}}$\ast$ Main\+Window\+::read = new \mbox{\hyperlink{classReader}{Reader}}()\hspace{0.3cm}{\ttfamily [private]}}
+
+Lee e interpreta strings que vienen del editor 
+
+Definición en la línea 41 del archivo mainwindow.\+h.
+
+\mbox{\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5}} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window$\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+Estructura de la ventana principal especificada en el archivo .ui 
+
+Definición en la línea 26 del archivo mainwindow.\+h.
+
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\end{DoxyCompactItemize}

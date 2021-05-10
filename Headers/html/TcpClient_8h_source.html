@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C! IDE/Text Editor: Fichero Fuente TcpClient.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C! IDE/Text Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TcpClient.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by mavros on 30/4/21.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef C_TEXT_EDITOR_TCPCLIENT_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define C_TEXT_EDITOR_TCPCLIENT_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;QtNetwork&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classTcpClient.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTcpClient.html">TcpClient</a> : <span class="keyword">public</span> QObject{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classTcpClient.html#a741958f95d099d2a8c0320d3fba9041e">   24</a></span>&#160;    QTcpSocket *<a class="code" href="classTcpClient.html#a741958f95d099d2a8c0320d3fba9041e">m_socket</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classTcpClient.html#ac28bbc692e71ee45ebba4d5b79327c7d">   29</a></span>&#160;    quint16 <a class="code" href="classTcpClient.html#ac28bbc692e71ee45ebba4d5b79327c7d">m_blockSize</a> = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classTcpClient.html#a7d4ea24b270a6d688adf6f8ddb3c4fb4">   34</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classTcpClient.html#a7d4ea24b270a6d688adf6f8ddb3c4fb4">m_isValid</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classTcpClient.html#a135f8e77b7d681ec99077774e2c8949c">TcpClient</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classTcpClient.html#a8c4ef8e5df109296101d53afcbb53057">~TcpClient</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classTcpClient.html#a135f8e77b7d681ec99077774e2c8949c">TcpClient</a>(QObject *parent, QTcpSocket *socket);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> &amp;<a class="code" href="classTcpClient.html#a5e9ef69f7edf553fad1e10ce9f786223">isValid</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTcpClient.html#a1771ee611d1e73ed063ddcb3de3fea6c">sendMessage</a>(QString message);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classTcpClient.html#aae60f3beac0491dfcf8a4f213ea14ff5">connectTo</a>(QString host, quint16 port);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;signals:</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTcpClient.html#ae4346e8d0426f772ba0987d5283df48b">messageReceived</a>(QString message);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTcpClient.html#aa4d3a74fc6a970742dc0c412733689e5">onReadyRead</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classTcpClient.html#a13c6c7d38fd2be50d93f6966291f5fc2">onDisconnected</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif //C_TEXT_EDITOR_TCPCLIENT_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassTcpClient_html_a741958f95d099d2a8c0320d3fba9041e"><div class="ttname"><a href="classTcpClient.html#a741958f95d099d2a8c0320d3fba9041e">TcpClient::m_socket</a></div><div class="ttdeci">QTcpSocket * m_socket</div><div class="ttdef"><b>Definition:</b> <a href="TcpClient_8h_source.html#l00024">TcpClient.h:24</a></div></div>
+<div class="ttc" id="aclassTcpClient_html_a135f8e77b7d681ec99077774e2c8949c"><div class="ttname"><a href="classTcpClient.html#a135f8e77b7d681ec99077774e2c8949c">TcpClient::TcpClient</a></div><div class="ttdeci">TcpClient(QObject *parent=nullptr)</div></div>
+<div class="ttc" id="aclassTcpClient_html_aa4d3a74fc6a970742dc0c412733689e5"><div class="ttname"><a href="classTcpClient.html#aa4d3a74fc6a970742dc0c412733689e5">TcpClient::onReadyRead</a></div><div class="ttdeci">void onReadyRead()</div></div>
+<div class="ttc" id="aclassTcpClient_html_a13c6c7d38fd2be50d93f6966291f5fc2"><div class="ttname"><a href="classTcpClient.html#a13c6c7d38fd2be50d93f6966291f5fc2">TcpClient::onDisconnected</a></div><div class="ttdeci">void onDisconnected()</div></div>
+<div class="ttc" id="aclassTcpClient_html_ae4346e8d0426f772ba0987d5283df48b"><div class="ttname"><a href="classTcpClient.html#ae4346e8d0426f772ba0987d5283df48b">TcpClient::messageReceived</a></div><div class="ttdeci">void messageReceived(QString message)</div></div>
+<div class="ttc" id="aclassTcpClient_html_a1771ee611d1e73ed063ddcb3de3fea6c"><div class="ttname"><a href="classTcpClient.html#a1771ee611d1e73ed063ddcb3de3fea6c">TcpClient::sendMessage</a></div><div class="ttdeci">void sendMessage(QString message)</div></div>
+<div class="ttc" id="aclassTcpClient_html"><div class="ttname"><a href="classTcpClient.html">TcpClient</a></div><div class="ttdef"><b>Definition:</b> <a href="TcpClient_8h_source.html#l00016">TcpClient.h:16</a></div></div>
+<div class="ttc" id="aclassTcpClient_html_aae60f3beac0491dfcf8a4f213ea14ff5"><div class="ttname"><a href="classTcpClient.html#aae60f3beac0491dfcf8a4f213ea14ff5">TcpClient::connectTo</a></div><div class="ttdeci">bool connectTo(QString host, quint16 port)</div></div>
+<div class="ttc" id="aclassTcpClient_html_a8c4ef8e5df109296101d53afcbb53057"><div class="ttname"><a href="classTcpClient.html#a8c4ef8e5df109296101d53afcbb53057">TcpClient::~TcpClient</a></div><div class="ttdeci">virtual ~TcpClient()</div></div>
+<div class="ttc" id="aclassTcpClient_html_a5e9ef69f7edf553fad1e10ce9f786223"><div class="ttname"><a href="classTcpClient.html#a5e9ef69f7edf553fad1e10ce9f786223">TcpClient::isValid</a></div><div class="ttdeci">const bool &amp; isValid()</div></div>
+<div class="ttc" id="aclassTcpClient_html_ac28bbc692e71ee45ebba4d5b79327c7d"><div class="ttname"><a href="classTcpClient.html#ac28bbc692e71ee45ebba4d5b79327c7d">TcpClient::m_blockSize</a></div><div class="ttdeci">quint16 m_blockSize</div><div class="ttdef"><b>Definition:</b> <a href="TcpClient_8h_source.html#l00029">TcpClient.h:29</a></div></div>
+<div class="ttc" id="aclassTcpClient_html_a7d4ea24b270a6d688adf6f8ddb3c4fb4"><div class="ttname"><a href="classTcpClient.html#a7d4ea24b270a6d688adf6f8ddb3c4fb4">TcpClient::m_isValid</a></div><div class="ttdeci">bool m_isValid</div><div class="ttdef"><b>Definition:</b> <a href="TcpClient_8h_source.html#l00034">TcpClient.h:34</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

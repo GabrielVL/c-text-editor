@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C! IDE/Text Editor: Fichero Fuente memoryManager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C! IDE/Text Editor
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">memoryManager.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by mauro on 4/24/21.</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef C_TEXT_EDITOR_MEMORYMANAGER_CPP_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define C_TEXT_EDITOR_MEMORYMANAGER_CPP_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;ui_mainwindow.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classmemoryManager.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmemoryManager.html">memoryManager</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classmemoryManager.html#a065141321cb166bcbfb6b80e54f50b7d">   21</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="classmemoryManager.html#a065141321cb166bcbfb6b80e54f50b7d">memoria</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classmemoryManager.html#ad684831ce6d255687919806f8a2bcbaf">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classmemoryManager.html#ad684831ce6d255687919806f8a2bcbaf">indice</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classmemoryManager.html#ada913d9209d6484d8b14fb6ec8504fad">   31</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classmemoryManager.html#ada913d9209d6484d8b14fb6ec8504fad">indiceMemoria</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classmemoryManager.html#a2ecfe2147f03c7569cee6115b03e7f00">   36</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classmemoryManager.html#a2ecfe2147f03c7569cee6115b03e7f00">vectorTipos</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classmemoryManager.html#a2e4012abeaf21138caee2c5f948c1229">   41</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classmemoryManager.html#a2e4012abeaf21138caee2c5f948c1229">vectorEtiquetas</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classmemoryManager.html#ade7ba19362c3a6048d45a38f6ec3f462">   46</a></span>&#160;    std::vector&lt;std::string&gt; <a class="code" href="classmemoryManager.html#ade7ba19362c3a6048d45a38f6ec3f462">vectorValores</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="classmemoryManager.html#ae4e61ab5b05f2948f2567700f26885d0">memoryManager</a>(<span class="keywordtype">int</span> bytes);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classmemoryManager.html#af87bc667a8b9c3861b953c530ef63c30">~memoryManager</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmemoryManager.html#a34d608ac6e0727d11e1d2c8b35e231d0">insertarMemoria</a>(std::string tipo);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmemoryManager.html#a40bde44eef38bf07b2a3f41e2a7be80c">recibirInstrucciones</a>(std::string tipo, std::string etiqueta, std::string valor);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classmemoryManager.html#a70546561c368bd30afe7bffcb1240535">obtenerPosicion</a>(<span class="keywordtype">int</span> ind, std::string tipo);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmemoryManager.html#a833b8113c3b140a115a683ffe115eeb8">imprimirEstado</a>(Ui::MainWindow *ui);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    QString <a class="code" href="classmemoryManager.html#a3811ff5408f405895da6faa9dd23f287">pointerToQString</a>(<span class="keywordtype">void</span> *ptr);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classmemoryManager.html#a2c32c57a4f7d922324f3227f1a95f084">clearVector</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;};</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif //C_TEXT_EDITOR_MEMORYMANAGER_CPP_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclassmemoryManager_html_a40bde44eef38bf07b2a3f41e2a7be80c"><div class="ttname"><a href="classmemoryManager.html#a40bde44eef38bf07b2a3f41e2a7be80c">memoryManager::recibirInstrucciones</a></div><div class="ttdeci">void recibirInstrucciones(std::string tipo, std::string etiqueta, std::string valor)</div></div>
+<div class="ttc" id="aclassmemoryManager_html_ae4e61ab5b05f2948f2567700f26885d0"><div class="ttname"><a href="classmemoryManager.html#ae4e61ab5b05f2948f2567700f26885d0">memoryManager::memoryManager</a></div><div class="ttdeci">memoryManager(int bytes)</div></div>
+<div class="ttc" id="aclassmemoryManager_html"><div class="ttname"><a href="classmemoryManager.html">memoryManager</a></div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00013">memoryManager.h:13</a></div></div>
+<div class="ttc" id="aclassmemoryManager_html_a065141321cb166bcbfb6b80e54f50b7d"><div class="ttname"><a href="classmemoryManager.html#a065141321cb166bcbfb6b80e54f50b7d">memoryManager::memoria</a></div><div class="ttdeci">char * memoria</div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00021">memoryManager.h:21</a></div></div>
+<div class="ttc" id="aclassmemoryManager_html_ada913d9209d6484d8b14fb6ec8504fad"><div class="ttname"><a href="classmemoryManager.html#ada913d9209d6484d8b14fb6ec8504fad">memoryManager::indiceMemoria</a></div><div class="ttdeci">int indiceMemoria</div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00031">memoryManager.h:31</a></div></div>
+<div class="ttc" id="aclassmemoryManager_html_af87bc667a8b9c3861b953c530ef63c30"><div class="ttname"><a href="classmemoryManager.html#af87bc667a8b9c3861b953c530ef63c30">memoryManager::~memoryManager</a></div><div class="ttdeci">virtual ~memoryManager()</div></div>
+<div class="ttc" id="aclassmemoryManager_html_a34d608ac6e0727d11e1d2c8b35e231d0"><div class="ttname"><a href="classmemoryManager.html#a34d608ac6e0727d11e1d2c8b35e231d0">memoryManager::insertarMemoria</a></div><div class="ttdeci">void insertarMemoria(std::string tipo)</div></div>
+<div class="ttc" id="aclassmemoryManager_html_a70546561c368bd30afe7bffcb1240535"><div class="ttname"><a href="classmemoryManager.html#a70546561c368bd30afe7bffcb1240535">memoryManager::obtenerPosicion</a></div><div class="ttdeci">int obtenerPosicion(int ind, std::string tipo)</div></div>
+<div class="ttc" id="aclassmemoryManager_html_a2ecfe2147f03c7569cee6115b03e7f00"><div class="ttname"><a href="classmemoryManager.html#a2ecfe2147f03c7569cee6115b03e7f00">memoryManager::vectorTipos</a></div><div class="ttdeci">std::vector&lt; std::string &gt; vectorTipos</div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00036">memoryManager.h:36</a></div></div>
+<div class="ttc" id="aclassmemoryManager_html_a3811ff5408f405895da6faa9dd23f287"><div class="ttname"><a href="classmemoryManager.html#a3811ff5408f405895da6faa9dd23f287">memoryManager::pointerToQString</a></div><div class="ttdeci">QString pointerToQString(void *ptr)</div></div>
+<div class="ttc" id="aclassmemoryManager_html_ade7ba19362c3a6048d45a38f6ec3f462"><div class="ttname"><a href="classmemoryManager.html#ade7ba19362c3a6048d45a38f6ec3f462">memoryManager::vectorValores</a></div><div class="ttdeci">std::vector&lt; std::string &gt; vectorValores</div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00046">memoryManager.h:46</a></div></div>
+<div class="ttc" id="aclassmemoryManager_html_ad684831ce6d255687919806f8a2bcbaf"><div class="ttname"><a href="classmemoryManager.html#ad684831ce6d255687919806f8a2bcbaf">memoryManager::indice</a></div><div class="ttdeci">int indice</div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00026">memoryManager.h:26</a></div></div>
+<div class="ttc" id="aclassmemoryManager_html_a833b8113c3b140a115a683ffe115eeb8"><div class="ttname"><a href="classmemoryManager.html#a833b8113c3b140a115a683ffe115eeb8">memoryManager::imprimirEstado</a></div><div class="ttdeci">void imprimirEstado(Ui::MainWindow *ui)</div></div>
+<div class="ttc" id="aclassmemoryManager_html_a2c32c57a4f7d922324f3227f1a95f084"><div class="ttname"><a href="classmemoryManager.html#a2c32c57a4f7d922324f3227f1a95f084">memoryManager::clearVector</a></div><div class="ttdeci">void clearVector()</div></div>
+<div class="ttc" id="aclassmemoryManager_html_a2e4012abeaf21138caee2c5f948c1229"><div class="ttname"><a href="classmemoryManager.html#a2e4012abeaf21138caee2c5f948c1229">memoryManager::vectorEtiquetas</a></div><div class="ttdeci">std::vector&lt; std::string &gt; vectorEtiquetas</div><div class="ttdef"><b>Definition:</b> <a href="memoryManager_8h_source.html#l00041">memoryManager.h:41</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

@@ -42,6 +42,11 @@ public:
     explicit TcpClient(QObject *parent = nullptr);
 
     /**
+     * Destructor del cliente
+     */
+    virtual ~TcpClient();
+
+    /**
      * Crea un cliente aceptando un socket
      * @param parent Hereda de QObject
      * @param socket Socket heredado
